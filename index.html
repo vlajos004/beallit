@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-X9cu655TPaCFRTvmAiUUo04KB+gRk2tVuKuiKaFOj+0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-sQoh3vGNs4fslpkoj6l0S9aSlb5xOKPR3LCIoTHRfGk='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BeállIT – Weboldal, online foglaló és IT kisvállalkozásoknak | Siófok</title>
@@ -1159,9 +1159,8 @@ nav.links a.active { color: var(--accent); }
     { id: 'adat', q: 'Hova küldjük az ajánlatot?', type: 'contact' }
   ];
   // 0. kártya: rövid bevezető, mielőtt az első kérdés jön
-  Q.unshift({ id: 'start', type: 'intro', q: 'Mielőtt elkezded',
-    hint: 'Ebből a pár kérdésből értjük meg, hogyan dolgozol most, és mire lenne szükséged.',
-    items: ['9 rövid kérdés, nagyjából 2 perc', 'A legtöbbre egy koppintással válaszolsz', 'Ha valamiben bizonytalan vagy, nem baj: az ajánlat előtt úgyis átbeszéljük', 'Elküldés előtt látod az összefoglalót, és bármit módosíthatsz', 'Ingyenes, és semmire nem kötelez'] });
+  Q.unshift({ id: 'start', type: 'intro', q: 'Az első lépés',
+    hint: 'Kilenc rövid kérdés, nagyjából két perc. Ebből látjuk, hol tart most a vállalkozásod, és merre érdemes továbblépni.', items: [] });
   var ans = {}, qi = 0, qDone = false, qTimer = null, QN = Q.length - 1; // QN: a valódi kérdések száma
   function escH(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
   function qAnim(dir) { var b = el('qBody'); b.classList.remove('fwd', 'back'); if (dir) { void b.offsetWidth; b.classList.add(dir); } }
@@ -1170,7 +1169,7 @@ nav.links a.active { color: var(--accent); }
   function qRender(dir) {
     var q = Q[qi], html = '<h3 id="qTitle" tabindex="-1">' + q.q + '</h3>' + (q.hint ? '<p class="qhint">' + q.hint + '</p>' : '');
     if (q.type === 'intro') {
-      html += '<ul class="qintro">' + q.items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>';
+      if (q.items.length) html += '<ul class="qintro">' + q.items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>';
     } else if (q.type === 'one' || q.type === 'multi') {
       var all = q.opts.concat(q.none ? [q.none] : []).concat(q.other ? ['Egyéb'] : []);
       html += '<div class="qopts' + (q.type === 'multi' ? ' multi' : '') + '" role="group" aria-labelledby="qTitle">';
