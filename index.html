@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-DARu1nYhCvS+wN5oPaEOE4/NLPqBqrK8gODCuX1foSk='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-RZPg9JPw5hzgKOGVTU9BjNSqwX0cgU3y9pmDG+VCR+0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BeállIT – Weboldal, online foglaló és IT kisvállalkozásoknak | Siófok</title>
@@ -1328,7 +1328,7 @@ nav.links a.active { color: var(--accent); }
     } else {
       html += '<div class="fields">' +
         '<label for="qName">Neved<input id="qName" type="text" maxlength="80" autocomplete="name" value="' + escH(ans.nev) + '"></label>' +
-        '<label for="qBiz">Vállalkozás neve<input id="qBiz" type="text" maxlength="120" autocomplete="organization" value="' + escH(ans.ceg) + '"></label>' +
+        '<label for="qBiz">Vállalkozás neve (nem kötelező)<input id="qBiz" type="text" maxlength="120" autocomplete="organization" value="' + escH(ans.ceg) + '"></label>' +
         '<label for="qEmail">E-mail<input id="qEmail" type="email" maxlength="120" autocomplete="email" value="' + escH(ans.email) + '"></label>' +
         '<label for="qPhone">Telefon (nem kötelező)<input id="qPhone" type="tel" maxlength="30" autocomplete="tel" value="' + escH(ans.tel) + '"></label>' +
         '<label for="qRef" style="grid-column:1/-1">Ki ajánlott minket? (nem kötelező)<input id="qRef" type="text" maxlength="120" placeholder="Az ismerősöd neve vagy vállalkozása" value="' + escH(ans.ajanlo) + '"></label>' +
