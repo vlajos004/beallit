@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-mDstgoK9PfHJXfEhdPOT+28QyQ28304rVJCskQzJkJU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-MemYZKPBBWcq0mmpei04ZYw1jaA3rhF7nCXauQhZtCU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BeállIT – Weboldal, online foglaló és IT kisvállalkozásoknak | Siófok</title>
@@ -494,6 +494,7 @@ nav.links a.active { color: var(--accent); }
 @media (max-width: 560px) { .qtop { padding: 14px 18px; } .qbody { padding: 22px 18px 6px; min-height: 0; } .qfoot { padding: 8px 18px 20px; } }
 .quote .qtop { transition: opacity .3s; }
 .quote.is-intro .qtop { display: none; }
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 </style>
 </head>
 <body>
@@ -1175,7 +1176,7 @@ nav.links a.active { color: var(--accent); }
   // 0. kártya: rövid bevezető, mielőtt az első kérdés jön
   Q.unshift({ id: 'start', type: 'intro', q: 'Az első lépés',
     hint: 'Kilenc rövid kérdés, nagyjából két perc. Ebből látjuk, hol tart most a vállalkozásod, és merre érdemes továbblépni.', items: [] });
-  var ans = {}, qi = 0, qDone = false, qTimer = null, QN = Q.length - 1; // QN: a valódi kérdések száma
+  var ans = {}, qi = 0, qDone = false, qSent = false, qStartT = 0, qTimer = null, QN = Q.length - 1; // QN: a valódi kérdések száma
   function escH(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
   function qAnim(dir) { var b = el('qBody'); b.classList.remove('fwd', 'back'); if (dir) { void b.offsetWidth; b.classList.add(dir); } }
   function qErrShow(msg) { var e = el('qErr'); e.textContent = msg; e.classList.remove('shake'); void e.offsetWidth; e.classList.add('shake'); }
@@ -1202,6 +1203,7 @@ nav.links a.active { color: var(--accent); }
         '<label for="qEmail">E-mail<input id="qEmail" type="email" maxlength="120" autocomplete="email" value="' + escH(ans.email) + '"></label>' +
         '<label for="qPhone">Telefon (nem kötelező)<input id="qPhone" type="tel" maxlength="30" autocomplete="tel" value="' + escH(ans.tel) + '"></label>' +
         '<label for="qRef" style="grid-column:1/-1">Ki ajánlott minket? (nem kötelező)<input id="qRef" type="text" maxlength="120" placeholder="Az ismerősöd neve vagy vállalkozása" value="' + escH(ans.ajanlo) + '"></label>' +
+        '<label class="hp" aria-hidden="true">Ezt hagyd üresen<input id="qHp" type="text" tabindex="-1" autocomplete="off"></label>' +
         '</div><p class="qhint" style="margin-top:0">Az adataidat csak az ajánlat elkészítéséhez használjuk. Részletek az <a href="adatkezeles.html" target="_blank" rel="noopener">adatkezelési tájékoztatóban</a>.</p>';
     }
     el('qBody').innerHTML = html;
@@ -1222,7 +1224,7 @@ nav.links a.active { color: var(--accent); }
     if (q.other && el('qOther')) ans[q.id + '_egyeb'] = el('qOther').value.trim();
     if (q.type === 'contact' && el('qName')) {
       ans.nev = el('qName').value.trim(); ans.ceg = el('qBiz').value.trim();
-      ans.email = el('qEmail').value.trim(); ans.tel = el('qPhone').value.trim(); ans.ajanlo = el('qRef').value.trim();
+      ans.email = el('qEmail').value.trim(); ans.tel = el('qPhone').value.trim(); ans.ajanlo = el('qRef').value.trim(); ans._hp = el('qHp') ? el('qHp').value : '';
     }
   }
   function qValid() {
@@ -1240,7 +1242,9 @@ nav.links a.active { color: var(--accent); }
   }
   function qGo(d) {
     clearTimeout(qTimer);
+    if (qDone && qSent) { ans = {}; qi = 0; qDone = false; qSent = false; qRender('back'); el('qTitle').focus({ preventScroll: true }); return; } // „Új ajánlatkérés”
     if (qDone) { qDone = false; qRender('back'); return; }
+    if (qi === 0 && d > 0) qStartT = Date.now();
     qSave();
     if (d > 0) {
       var err = qValid();
@@ -1298,19 +1302,28 @@ nav.links a.active { color: var(--accent); }
     qEndState();
     el('qTitle').focus({ preventScroll: true });
   }
+  function qSuccess(text) {
+    el('qBody').innerHTML = '<h3 id="qTitle" tabindex="-1">Megkaptuk, köszönjük!</h3><p class="qhint">Egy munkanapon belül válaszolunk erre a címre: <b>' + escH(ans.email) + '</b></p><div class="qsum" id="qSum"></div>';
+    el('qSum').textContent = text;
+    qEndState();
+    qSent = true;
+    el('qBack').textContent = 'Új ajánlatkérés';
+  }
   function qFinish() {
     var text = qSummary();
+    // Spam elleni védelem: rejtett mező (csak a robotok töltik ki), túl gyors kitöltés, és ugyanarról a gépről sűrű küldés
+    if (ans._hp || Date.now() - qStartT < 8000) { qSuccess(text); return; }
+    var last = 0; try { last = +localStorage.getItem('beallit_q_sent') || 0; } catch (e) {}
+    if (Date.now() - last < 2 * 60 * 1000) { qErrShow('Az előző ajánlatkérésed épp most ment el. Ha újat küldenél, próbáld pár perc múlva.'); return; }
     if (!FORM_ENDPOINT) { qManual(text, false); return; }
     el('qNext').disabled = true; el('qNext').textContent = 'Küldés…';
     fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ access_key: WEB3FORMS_KEY, from_name: 'BeállIT ajánlatkérő', subject: 'Ajánlatkérés: ' + (ans.ceg || ans.nev), name: ans.nev, email: ans.email, message: text, botcheck: '' }) })
+      body: JSON.stringify({ access_key: WEB3FORMS_KEY, from_name: 'BeállIT ajánlatkérő', subject: 'Ajánlatkérés: ' + (ans.ceg || ans.nev), name: ans.nev, email: ans.email, message: text, botcheck: ans._hp ? 'on' : '' }) })
       .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.success) throw new Error(j.message || r.status); }); })
       .then(function () {
         el('qNext').disabled = false;
-        el('qBody').innerHTML = '<h3 id="qTitle" tabindex="-1">Megkaptuk, köszönjük!</h3><p class="qhint">Egy munkanapon belül válaszolunk erre a címre: <b>' + escH(ans.email) + '</b></p><div class="qsum" id="qSum"></div>';
-        el('qSum').textContent = text;
-        qEndState();
-        el('qBack').style.visibility = 'hidden';
+        try { localStorage.setItem('beallit_q_sent', String(Date.now())); } catch (e) {}
+        qSuccess(text);
       })
       .catch(function () { el('qNext').disabled = false; qManual(text, true); });
   }
