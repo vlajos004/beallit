@@ -530,6 +530,9 @@ nav.links a.active { color: var(--accent); }
 .faq-a > div { min-height: 0; overflow: hidden; }
 .faq-a p { color: var(--muted); padding: 0 40px 20px 0; max-width: 52em; opacity: 0; transform: translateY(-10px); transition: opacity .35s ease, transform .45s cubic-bezier(.2,.8,.2,1); }
 .faq-item.open .faq-a p { opacity: 1; transform: none; transition-delay: .12s; }
+.faq-cat { margin: 22px 0 4px; font: 800 .78rem var(--font-body); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); opacity: 0; transform: translateY(18px); transition: opacity .45s ease, transform .55s cubic-bezier(.2,.8,.2,1); }
+.faq.open .faq-cat { opacity: 1; transform: none; transition-delay: calc(var(--i) * 45ms + .08s); }
+.faq-cat + .faq-item { border-top: 0; }
 .faq-more { border-top: 1px solid var(--line); padding-top: 18px; color: var(--muted); font-size: .92rem; }
 .faq-q:focus-visible, .faq-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 12px; }
 @media (max-width: 560px) { .faq-toggle { padding: 20px 18px; } .faq-in { padding: 0 18px; } .faq-toggle > i { width: 40px; height: 40px; } .faq-a p { padding-right: 0; } }
@@ -794,6 +797,7 @@ nav.links a.active { color: var(--accent); }
         </button>
         <div class="faq-panel" id="faqPanel" inert>
           <div class="faq-in">
+            <h3 class="faq-cat" style="--i:0">Ár és fizetés</h3>
             <div class="faq-item" style="--i:0">
               <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqA0" id="faqQ0"><span>Mennyibe kerül egy weboldal vagy egy online foglaló?</span><i aria-hidden="true"></i></button>
               <div class="faq-a" id="faqA0" role="region" aria-labelledby="faqQ0" inert><div><p>Minden vállalkozás igénye más, ezért a pontos árat az ajánlatban küldjük el. Egy egyszerű weboldal saját domainnel 39 990 Ft-tól indul.</p></div></div>
@@ -806,6 +810,7 @@ nav.links a.active { color: var(--accent); }
               <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqA2" id="faqQ2"><span>Hogyan lehet fizetni?</span><i aria-hidden="true"></i></button>
               <div class="faq-a" id="faqA2" role="region" aria-labelledby="faqQ2" inert><div><p>A fizetés módjában közösen állapodunk meg. Mindenről számlát adunk.</p></div></div>
             </div>
+            <h3 class="faq-cat" style="--i:3">Folyamat és idő</h3>
             <div class="faq-item" style="--i:3">
               <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqA3" id="faqQ3"><span>Mennyi idő alatt készül el?</span><i aria-hidden="true"></i></button>
               <div class="faq-a" id="faqA3" role="region" aria-labelledby="faqQ3" inert><div><p>A projekt nagyságától és összetettségétől függ. Egy egyszerűbb weboldal akár néhány nap alatt elkészül, egy közepesen összetett rendszer pedig általában 1–2 hét után már használható.</p></div></div>
@@ -818,6 +823,7 @@ nav.links a.active { color: var(--accent); }
               <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqA5" id="faqQ5"><span>Mi van, ha nem tetszik az első változat?</span><i aria-hidden="true"></i></button>
               <div class="faq-a" id="faqA5" role="region" aria-labelledby="faqQ5" inert><div><p>Átbeszéljük, mit szeretnél másképp, és néhány napon belül díjmentesen átdolgozzuk.</p></div></div>
             </div>
+            <h3 class="faq-cat" style="--i:6">Tulajdon és utána</h3>
             <div class="faq-item" style="--i:6">
               <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqA6" id="faqQ6"><span>Kié lesz a weboldal? Elvihetem, ha később váltanék?</span><i aria-hidden="true"></i></button>
               <div class="faq-a" id="faqA6" role="region" aria-labelledby="faqQ6" inert><div><p>A weboldal a tiéd. Az üzemeltetéshez mi is megtartjuk a hozzáférést, de ha később máshoz vinnéd, ennek semmi akadálya: a domaint is átregisztráljuk a nevedre.</p></div></div>
@@ -830,6 +836,7 @@ nav.links a.active { color: var(--accent); }
               <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqA8" id="faqQ8"><span>Mi történik, ha valami nem működik?</span><i aria-hidden="true"></i></button>
               <div class="faq-a" id="faqA8" role="region" aria-labelledby="faqQ8" inert><div><p>Legfeljebb 2 munkanapon belül válaszolunk. Ha ünnep vagy szabadság miatt nem vagyunk elérhetők, erről előre e-mailben szólunk.</p></div></div>
             </div>
+            <h3 class="faq-cat" style="--i:9">Együttműködés</h3>
             <div class="faq-item" style="--i:9">
               <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqA9" id="faqQ9"><span>Lehet személyesen is találkozni?</span><i aria-hidden="true"></i></button>
               <div class="faq-a" id="faqA9" role="region" aria-labelledby="faqQ9" inert><div><p>Igen, ezt előre egyeztetjük. Siófokon és környékén a legegyszerűbb, de ha arra járunk, máshol is megoldható.</p></div></div>
