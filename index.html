@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-X9cu655TPaCFRTvmAiUUo04KB+gRk2tVuKuiKaFOj+0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BeállIT – Weboldal, online foglaló és IT kisvállalkozásoknak | Siófok</title>
+<meta name="description" content="Weboldal, webáruház, online időpontfoglaló, egyedi céges rendszerek és IT-beállítások siófoki és környékbeli kisvállalkozásoknak – a te problémádra szabva. Kérj ingyenes ajánlatot két perc alatt!">
+<link rel="canonical" href="https://beallit.hu/">
+<meta name="theme-color" content="#0E1A2B">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:site_name" content="BeállIT">
+<meta property="og:title" content="BeállIT – Weboldal, online foglaló és IT kisvállalkozásoknak">
+<meta property="og:description" content="Weboldal, webáruház, online időpontfoglaló, egyedi céges rendszerek és IT-beállítások siófoki és környékbeli kisvállalkozásoknak – a te problémádra szabva.">
+<meta property="og:url" content="https://beallit.hu/">
+<meta property="og:image" content="https://beallit.hu/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "BeállIT", "url": "https://beallit.hu/", "logo": "https://beallit.hu/icon-192.png", "image": "https://beallit.hu/og-image.jpg", "description": "Weboldal, webáruház, online időpontfoglaló, egyedi céges rendszerek és IT-beállítások siófoki és környékbeli kisvállalkozásoknak – a te problémádra szabva.", "telephone": "+36301909700", "email": "hello@beallit.hu", "founder": {"@type": "Person", "name": "Varga Lajos"}, "areaServed": [{"@type": "City", "name": "Siófok"}, {"@type": "AdministrativeArea", "name": "Somogy vármegye"}], "knowsLanguage": "hu", "sameAs": ["https://www.instagram.com/beall.it/"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Szolgáltatások", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Online időpontfoglaló rendszer"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Weboldal-készítés"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Cégprofil beállítása"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Keresőoptimalizálás (SEO)"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatizálás"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "IT-beállítások kisvállalkozásoknak"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Webáruház-fejlesztés"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Egyedi szoftverfejlesztés"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Céges nyilvántartó és ügyviteli rendszerek"}}]}}</script>
+<link rel="preload" href="fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
+<style>
+/* Betűtípusok a saját tárhelyről (nem a Google Fonts-ról), latin + latin-ext a magyar ő/ű miatt */
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-display: swap; font-weight: 600; src: url(fonts/bricolage-grotesque-latin-ext-600-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-display: swap; font-weight: 600; src: url(fonts/bricolage-grotesque-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-display: swap; font-weight: 800; src: url(fonts/bricolage-grotesque-latin-ext-800-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-display: swap; font-weight: 800; src: url(fonts/bricolage-grotesque-latin-800-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-display: swap; font-weight: 400; src: url(fonts/manrope-latin-ext-400-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-display: swap; font-weight: 400; src: url(fonts/manrope-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-display: swap; font-weight: 500; src: url(fonts/manrope-latin-ext-500-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-display: swap; font-weight: 500; src: url(fonts/manrope-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-display: swap; font-weight: 700; src: url(fonts/manrope-latin-ext-700-normal.woff2) format('woff2'); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Manrope'; font-style: normal; font-display: swap; font-weight: 700; src: url(fonts/manrope-latin-700-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+:root {
+  /* Layout: bal oldalt igazított szöveg, jobbra egy "beállítások" panel; alatta szolgáltatások, élő demó, árak, kapcsolat. */
+  --paper: #EEF1F5;
+  --surface: #FFFFFF;
+  --ink: #0E1A2B;
+  --muted: #55627A;
+  --line: #D5DCE6;
+  --accent: #2346E8;
+  --accent-soft: #E3E8FD;
+  --signal: #FFC531;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.3rem, 5.5vw, 3.9rem); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); font-weight: 800; letter-spacing: -0.015em; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+p { margin: 0; }
+.wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+.it { color: var(--accent); }
+.logo { font-family: var(--font-display); font-weight: 800; font-size: 1.45rem; text-decoration: none; color: var(--ink); letter-spacing: -0.01em; }
+
+/* Nav */
+header.top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--paper) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+nav.links { display: flex; gap: 28px; }
+nav.links a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+nav.links a:hover { color: var(--accent); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font: 700 0.95rem var(--font-body); text-decoration: none; border: 2px solid var(--ink); cursor: pointer; transition: transform .15s; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--ink); color: #fff; }
+.btn-ghost { background: transparent; color: var(--ink); }
+.btn-small { padding: 8px 14px; }
+@media (max-width: 760px) { nav.links { display: none; } }
+
+/* Hero */
+.hero { padding: 64px 0 72px; }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+.hero .lead { margin-top: 20px; font-size: 1.15rem; color: var(--muted); max-width: 34em; }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; box-shadow: 0 18px 40px -24px rgba(14,26,43,.35); }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.panel-head strong { font-family: var(--font-display); font-size: 1.05rem; }
+.panel-head span { font-size: 0.8rem; color: var(--muted); }
+.toggle-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px dashed var(--line); }
+.toggle-row:last-child { border-bottom: 0; }
+.toggle-row small { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.3; }
+.switch { flex: none; width: 46px; height: 26px; border-radius: 99px; border: 0; background: var(--line); position: relative; cursor: pointer; transition: background .2s; }
+.switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.25); transition: transform .2s; }
+.switch[aria-checked="true"] { background: var(--accent); }
+.switch[aria-checked="true"]::after { transform: translateX(20px); }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; } }
+
+/* Sections */
+section.block { padding: 80px 0; }
+section.block.alt { background: var(--surface); border-block: 1px solid var(--line); }
+.section-head { display: grid; gap: 12px; margin-bottom: 40px; }
+.section-head > h2, .section-head > p { max-width: 40em; }
+.section-head p { color: var(--muted); font-size: 1.05rem; }
+
+.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+@media (min-width: 900px) { .services { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 560px) and (max-width: 899px) { .services { grid-template-columns: repeat(2, 1fr); } .services .service:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+.service { background: var(--paper); border-radius: 14px; padding: 24px; display: grid; gap: 10px; align-content: start; border: 1px solid transparent; }
+.service.main { background: var(--accent-soft); }
+.service p { color: var(--muted); font-size: 0.97rem; }
+.service ul { margin: 4px 0 0; padding-left: 18px; color: var(--ink); font-size: 0.93rem; }
+.tag { font-family: var(--font-body); font-size: .85rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+
+/* Demo */
+.demo-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 40px; align-items: start; }
+.demo-copy { display: grid; gap: 16px; }
+.demo-copy ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.booking { overflow-anchor: none; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 18px 40px -24px rgba(14,26,43,.35); }
+.booking-top { background: var(--ink); color: #fff; padding: 16px 22px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.booking-top strong { font-family: var(--font-display); font-size: 1.1rem; }
+.booking-top span { font-size: 0.78rem; background: var(--signal); color: var(--ink); padding: 2px 8px; border-radius: 6px; font-weight: 700; }
+.booking-body { padding: 22px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
+/* a becsukott lépések tartalma se feszíthesse szét a kártyát (telefonon kilógtak) */
+.bstep, .bstep-body > *, .bstep-inner, .dayline { min-width: 0; }
+.bstep-body { grid-template-columns: minmax(0, 1fr); }
+.step-label { font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opt { border: 1.5px solid var(--line); background: var(--surface); border-radius: 10px; padding: 9px 13px; font: 500 0.92rem var(--font-body); color: var(--ink); cursor: pointer; text-align: left; font-variant-numeric: tabular-nums; }
+.opt small { display: block; color: var(--muted); font-size: 0.78rem; }
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.opt:disabled { color: #A3ADBD; text-decoration: line-through; cursor: not-allowed; background: var(--paper); }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.fields label { display: grid; gap: 4px; font-size: 0.85rem; font-weight: 700; }
+.fields input { font: 400 1rem var(--font-body); padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); }
+.fields input:focus { border-color: var(--accent); outline: none; }
+.booking-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 18px; }
+.summary { font-size: 0.92rem; color: var(--muted); }
+.summary b { color: var(--ink); }
+.btn:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+.error { color: #B42318; font-size: 0.88rem; }
+.done { padding: 34px 22px; display: grid; gap: 14px; text-align: left; }
+.done .check { width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 1.5rem; font-weight: 800; }
+.ticket { background: var(--paper); border-radius: 12px; padding: 16px; display: grid; gap: 4px; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) { .demo-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .fields { grid-template-columns: 1fr; } }
+
+/* Napi idővonal a foglalóban */
+.dayline { margin: 0 0 18px; }
+.dl-read { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; margin-bottom: 14px; }
+.dl-read strong { white-space: nowrap; font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; line-height: 1; letter-spacing: -.01em; font-variant-numeric: tabular-nums; color: var(--ink); }
+.dl-read strong.empty { color: #A3ADBD; font-size: 1.15rem; }
+.dl-read small { color: var(--muted); font-size: .76rem; line-height: 1.3; text-align: right; max-width: 48%; }
+.dl-track { position: relative; height: 10px; border-radius: 99px; background: #D3D9E2; cursor: pointer; touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+.dl-track.dragging { cursor: grabbing; }
+.dl-track.dragging .dl-pick { transition: none; transform: scaleY(1.25); }
+.dl-track::before { content: ""; position: absolute; inset: -16px 0; }
+.dl-busy { position: absolute; top: 2px; bottom: 2px; border-radius: 99px; background: var(--signal); pointer-events: none; }
+.dl-pick { position: absolute; top: -4px; bottom: -4px; cursor: grab; border-radius: 99px; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft), 0 6px 14px -4px rgba(35,70,232,.6); transition: left .35s cubic-bezier(.2,.8,.2,1), width .35s cubic-bezier(.2,.8,.2,1); pointer-events: none; }
+.dl-hours { position: relative; height: 14px; margin-top: 10px; font-size: .68rem; color: #8B97AC; font-variant-numeric: tabular-nums; }
+.dl-hours span { position: absolute; top: 0; transform: translateX(-50%); }
+.dl-hours span::before { content: ""; position: absolute; left: 50%; top: -6px; width: 1px; height: 3px; background: #C6CFDB; }
+.dl-hours span:first-child { transform: none; }
+.dl-hours span:first-child::before { left: 0; }
+.dl-hours span:last-child { transform: translateX(-100%); }
+.dl-hours span:last-child::before { left: auto; right: 0; }
+.dl-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 8px; font-size: .72rem; color: var(--muted); }
+.dl-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 99px; margin-right: 5px; vertical-align: 1px; }
+
+/* Induló vállalkozásoknak sáv */
+.startup { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 18px 28px; flex-wrap: wrap; background: var(--ink); color: #DDE3EE; border-radius: 14px; padding: 20px 24px; font-size: .98rem; }
+.startup > div { flex: 1 1 380px; }
+.startup b { color: #fff; }
+.startup-btn { background: var(--signal); color: var(--ink); border-color: var(--signal); }
+
+/* Bevezető ajánlat */
+.hero-promo { display: inline-block; margin-top: 22px; color: #FFE6A3; font-size: .95rem; text-decoration: underline; text-decoration-color: rgba(255,197,49,.5); text-underline-offset: 4px; }
+.hero-promo:hover { text-decoration-color: var(--signal); }
+.hero-promo b { color: #fff; }
+@media (max-width: 480px) { .promo-long { display: none; } }
+@keyframes promo-pulse { 70% { box-shadow: 0 0 0 8px rgba(255,197,49,0); } 100% { box-shadow: 0 0 0 0 rgba(255,197,49,0); } }
+.promo { margin-top: 18px; max-width: 52em; }
+.promo p { color: var(--ink); font-size: .95rem; margin: 0; }
+.promo-left { margin-top: 4px !important; font-size: .95rem; }
+
+.referral { margin-top: 12px; font-size: .9rem; color: var(--muted); max-width: 52em; }
+.referral b { color: var(--ink); }
+
+
+/* Foglaló lépései harmonikaként */
+.booking-body { gap: 10px; }
+.booking-foot { margin-top: 8px; }
+.bstep { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); transition: border-color .3s, box-shadow .3s, background .3s; }
+.bstep.open { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); box-shadow: 0 10px 26px -18px rgba(35,70,232,.55); }
+.bstep.locked { background: var(--paper); }
+.bstep-head { width: 100%; display: flex; align-items: center; gap: 12px; padding: 13px 16px; border: 0; background: none; font: inherit; color: var(--ink); text-align: left; cursor: pointer; border-radius: 14px; }
+.bstep.locked .bstep-head { cursor: not-allowed; color: #A3ADBD; }
+.bstep-num { flex: none; position: relative; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font: 800 .85rem var(--font-display); background: var(--paper); color: var(--muted); border: 1.5px solid var(--line); transition: background .3s, color .3s, border-color .3s, transform .35s cubic-bezier(.34,1.56,.64,1); }
+.bstep-num svg { position: absolute; width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 24; stroke-dashoffset: 24; transition: stroke-dashoffset .35s .1s ease-out; }
+.bstep.open .bstep-num { background: var(--accent); border-color: var(--accent); color: #fff; transform: scale(1.06); }
+.bstep.is-done:not(.open) .bstep-num { background: var(--accent); border-color: var(--accent); }
+.bstep.is-done:not(.open) .bstep-num span { opacity: 0; }
+.bstep.is-done:not(.open) .bstep-num svg { stroke-dashoffset: 0; }
+.bstep-title { font-weight: 700; font-size: .95rem; white-space: nowrap; }
+.bstep-sum { flex: 1; min-width: 0; text-align: right; color: var(--muted); font-size: .85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; opacity: 0; transform: translateX(8px); transition: opacity .3s, transform .3s; }
+.bstep.is-done:not(.open) .bstep-sum { opacity: 1; transform: none; }
+.bstep-chev { flex: none; width: 9px; height: 9px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translate(-2px, -2px); opacity: .5; transition: transform .35s cubic-bezier(.2,.8,.2,1); margin-left: auto; }
+.bstep-sum + .bstep-chev { margin-left: 0; }
+.bstep.open .bstep-chev { transform: rotate(-135deg) translate(-2px, -2px); }
+.bstep-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s cubic-bezier(.2,.8,.2,1); }
+.bstep.open .bstep-body { grid-template-rows: 1fr; }
+.bstep-inner { min-height: 0; overflow: hidden; padding: 0 16px; opacity: 0; transform: translateY(-6px); transition: opacity .3s, transform .35s, padding .45s; }
+.bstep.open .bstep-inner { padding: 4px 16px 16px; opacity: 1; transform: none; transition-delay: .08s; }
+.bstep-next { margin-top: 14px; }
+@media (max-width: 480px) { .bstep-head { padding: 12px 12px; gap: 10px; } .bstep-inner, .bstep.open .bstep-inner { padding-left: 12px; padding-right: 12px; } }
+
+/* Megközelítés: a probléma az első */
+.approach { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: -12px 0 28px; }
+.approach > div { position: relative; padding: 18px 20px 18px 62px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); }
+.approach span { position: absolute; left: 18px; top: 18px; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: #fff; font: 800 .9rem var(--font-display); }
+.approach b { display: block; font-size: 1rem; margin-bottom: 4px; }
+.approach p { color: var(--muted); font-size: .92rem; line-height: 1.5; }
+section.block.alt .approach > div { background: var(--paper); }
+@media (max-width: 860px) { .approach { grid-template-columns: 1fr; } }
+
+/* Reference */
+
+/* Prices */
+.prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.price { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: grid; gap: 8px; align-content: start; }
+.price .amount { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.price .amount small { font-family: var(--font-body); font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+.price p { color: var(--muted); font-size: 0.95rem; }
+.note { margin-top: 20px; color: var(--muted); font-size: 0.92rem; }
+
+/* Steps */
+.block.dark { background: var(--ink); color: #fff; }
+.block.dark .section-head p { color: #9FAAC0; }
+.flow { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 76px; }
+.flow li { position: relative; display: grid; gap: 8px; align-content: start; padding-top: 22px; }
+.flow h3 { font-size: 1.2rem; }
+.flow p { color: #B9C3D6; font-size: .95rem; }
+.flow p a { color: var(--signal); }
+.fl-line { position: absolute; left: 0; right: 0; top: 0; height: 3px; border-radius: 3px; background: var(--signal); transform-origin: left; }
+.fa { position: absolute; overflow: visible; fill: none; stroke: var(--signal); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.fa-h { left: calc(100% + 9px); top: -32px; width: 58px; height: 44px; }
+.fa-v { display: none; }
+@media (max-width: 999px) {
+  .flow { grid-template-columns: 1fr; gap: 0; }
+  .flow li { width: 78%; }
+  .flow li:nth-child(even) { margin-left: auto; }
+  .flow li:not(:last-child) { margin-bottom: 92px; }
+  .fa-h { display: none; }
+  .fa-v { display: block; top: calc(100% + 12px); left: 38%; width: 130px; height: 70px; }
+  .flow li:nth-child(even) .fa-v { left: auto; right: 38%; transform: scaleX(-1); }
+}
+
+/* Munkáink */
+.refs { border-top: 1px solid var(--line); }
+.ref { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 16px 48px; padding: 34px 0; border-bottom: 1px solid var(--line); }
+.ref h3 { font-size: 1.2rem; line-height: 1.3; margin-top: 10px; }
+.ref p { color: var(--muted); }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: .85rem; font-weight: 700; color: var(--ink); }
+.status::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: #22A35A; }
+.status.wip::before { background: var(--signal); }
+@media (max-width: 760px) { .ref { grid-template-columns: 1fr; } }
+
+/* Contact */
+.contact { background: var(--ink); color: #fff; border-radius: 20px; padding: 48px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+.contact p { color: #B9C3D6; margin-top: 12px; }
+.contact-list { display: grid; gap: 14px; }
+.contact-list a, .contact-list div { display: grid; color: #fff; text-decoration: none; background: rgba(255,255,255,.07); border-radius: 12px; padding: 14px 18px; }
+.contact-list a:hover { background: rgba(255,255,255,.13); }
+.contact-list a { position: relative; padding-right: 44px; }
+.contact-list a::after { content: "→"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: #8E9AB2; transition: transform .2s, color .2s; }
+.contact-list a:hover::after { transform: translate(4px, -50%); color: #fff; }
+/* Kapcsolat dobozok: mindegyik saját színű, előtűnő hover-t kap díszítő csíkokkal és háromszöggel */
+.contact-list .c-mail { --g: linear-gradient(100deg, #1B37C9 0%, #2346E8 45%, #6C8BFF 100%); --glow: rgba(35,70,232,.7); --fx1: #6C8BFF; --fx2: #FFC531; }
+.contact-list .c-ig { --g: linear-gradient(100deg, #FEDA75 0%, #FA7E1E 25%, #D62976 55%, #962FBF 80%, #4F5BD5 100%); --glow: rgba(214,41,118,.7); --fx1: #D62976; --fx2: #FEDA75; }
+.contact-list .c-area { --g: linear-gradient(100deg, #188038 0%, #34A853 40%, #1A73E8 100%); --glow: rgba(52,168,83,.6); --fx1: #34A853; --fx2: #FBBC04; }
+.contact-list .c-tel { --g: linear-gradient(100deg, #0F9D58 0%, #22C55E 50%, #0EA5A4 100%); --glow: rgba(34,197,94,.6); --fx1: #22C55E; --fx2: #B7F7CF; }
+.contact-list a { isolation: isolate; transition: transform .3s cubic-bezier(.2,.8,.2,1), background .2s .1s, border-radius .3s; }
+.contact-list a:hover { background: transparent; border-radius: 12px 22px 12px 22px; transform: translateX(6px); }
+.contact-list a::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 12px 22px 12px 22px; background: var(--g); opacity: 0; clip-path: inset(0 100% 0 0 round 12px); transition: clip-path .45s cubic-bezier(.2,.8,.2,1), opacity .2s; }
+.contact-list a:hover::before { opacity: 1; clip-path: inset(0 0 0 0 round 12px 22px 12px 22px); }
+.contact-list a:hover small { color: rgba(255,255,255,.9); }
+.contact-list a:hover b, .contact-list a:hover small { text-shadow: 0 1px 3px rgba(0,0,0,.35); }
+.contact-list a:hover::after { color: #fff; }
+.contact-list .fx { position: absolute; inset: 0; pointer-events: none; }
+.contact-list .fx i { position: absolute; display: block; opacity: 0; transition: opacity .25s, transform .4s cubic-bezier(.34,1.56,.64,1); }
+.contact-list .fx i:nth-child(1) { left: -12px; top: 12px; width: 22px; height: 5px; border-radius: 2px; background: var(--fx1); transform: translateX(10px) skewX(-25deg); }
+.contact-list .fx i:nth-child(2) { left: -6px; top: 20px; width: 14px; height: 5px; border-radius: 2px; background: var(--fx2); transform: translateX(10px) skewX(-25deg); }
+.contact-list .fx i:nth-child(3) { right: -7px; bottom: -6px; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 13px solid var(--fx1); transform: translateY(-8px) rotate(20deg); }
+.contact-list .fx i:nth-child(4) { right: 22px; top: -9px; width: 46px; height: 2px; background: linear-gradient(90deg, transparent, var(--fx2)); transform: scaleX(0); transform-origin: right; }
+.contact-list a:hover .fx i { opacity: 1; }
+.contact-list a:hover .fx i:nth-child(1), .contact-list a:hover .fx i:nth-child(2) { transform: translateX(0) skewX(-25deg); }
+.contact-list a:hover .fx i:nth-child(2) { transition-delay: .06s; }
+.contact-list a:hover .fx i:nth-child(3) { transform: translateY(0) rotate(20deg); transition-delay: .1s; }
+.contact-list a:hover .fx i:nth-child(4) { transform: scaleX(1); transition-delay: .12s; }
+.contact-list a:focus-visible { outline-offset: 4px; }
+
+.contact-list small { color: #8E9AB2; font-size: 0.8rem; }
+.contact-list b { font-size: 1.05rem; }
+@media (max-width: 760px) { .contact { grid-template-columns: 1fr; padding: 32px 24px; } }
+
+.site-foot { background: #070D18; color: #9FAAC0; font-size: .9rem; padding: 56px 0 0; }
+.foot-grid { padding-bottom: 36px; }
+.foot-brand .logo { color: #fff; }
+.foot-brand .it { color: #7E97FF; }
+.foot-brand p { margin-top: 12px; max-width: 28em; }
+.foot-col { display: grid; gap: 8px; align-content: start; }
+.foot-col h4 { margin: 0 0 4px; font: 700 .8rem var(--font-body); color: #fff; letter-spacing: .02em; }
+.foot-col p { line-height: 1.8; }
+.site-foot a { color: #C9D2E3; text-decoration: none; }
+.site-foot a:hover { color: #fff; text-decoration: underline; }
+.foot-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 18px 0 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: .82rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr; } }
+
+/* ===== Mozgás ===== */
+html, body { overflow-x: clip; overscroll-behavior: none; }
+html { background: var(--paper); }
+/* Mobilon az oldalról beúszó elemek kilógnának a képernyőről, és a telefon szélesebbre venné az oldalt: ott csak alulról úsznak be */
+@media (max-width: 860px) {
+  html.js [data-reveal="left"], html.js [data-reveal="right"] { transform: translateY(32px); }
+  html.js .hero .panel { animation-name: rise; }
+}
+section[id] { scroll-margin-top: 72px; }
+@keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+@keyframes word { from { opacity: 0; transform: translateY(.7em) rotate(3deg); } }
+@keyframes slide-in { from { opacity: 0; transform: translateX(48px) rotate(2deg); } }
+@keyframes drop { from { transform: translateY(-100%); } }
+@keyframes drift { to { background-position: 28px 56px; } }
+@keyframes pop { 0% { transform: scale(.9); } 60% { transform: scale(1.06); } 100% { transform: scale(1); } }
+@keyframes pop-in { from { opacity: 0; transform: scale(.3); } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes flash { from { background: var(--accent-soft); } }
+@keyframes shake { 20% { transform: translateX(-6px); } 40% { transform: translateX(5px); } 60% { transform: translateX(-3px); } 80% { transform: translateX(2px); } }
+@keyframes ripple { to { transform: scale(34); opacity: 0; } }
+
+/* Görgetésjelző és fejléc */
+.progress { position: fixed; inset: 0 0 auto 0; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; z-index: 20; }
+header.top { transition: box-shadow .3s; }
+header.top .wrap { transition: height .3s; }
+header.top.scrolled { box-shadow: 0 10px 24px -20px rgba(14,26,43,.6); }
+.js header.top { animation: drop .6s cubic-bezier(.2,.8,.2,1) backwards; }
+.logo .it { display: inline-block; transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+.logo:hover .it { transform: rotate(-8deg) scale(1.15); }
+nav.links a { position: relative; padding: 4px 0; transition: color .2s; }
+nav.links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: 100% 50%; transition: transform .35s cubic-bezier(.2,.8,.2,1); }
+nav.links a:hover::after, nav.links a.active::after { transform: scaleX(1); transform-origin: 0 50%; }
+nav.links a.active { color: var(--accent); }
+
+/* Gombok */
+.btn { position: relative; overflow: hidden; transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s, background .25s, color .25s; }
+.btn::before { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.3) 50%, transparent 70%); transform: translateX(-120%); pointer-events: none; }
+.btn:hover:not(:disabled)::before { transform: translateX(120%); transition: transform .7s; }
+.btn:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 12px 22px -12px rgba(14,26,43,.6); }
+.btn:active:not(:disabled) { transform: translateY(0) scale(.96); box-shadow: none; }
+.btn-ghost:hover:not(:disabled) { background: var(--ink); color: #fff; }
+.btn .arrow { display: inline-block; transition: transform .25s; }
+.btn:hover .arrow { transform: translateX(5px); }
+.ripple { position: absolute; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: currentColor; opacity: .28; transform: scale(0); animation: ripple .6s ease-out forwards; pointer-events: none; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; }
+.hero .wrap { position: relative; }
+.hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(color-mix(in srgb, var(--accent) 38%, transparent) 1.3px, transparent 1.5px); background-size: 28px 28px; -webkit-mask-image: radial-gradient(60% 85% at 85% 40%, #000, transparent 75%); mask-image: radial-gradient(60% 85% at 85% 40%, #000, transparent 75%); animation: drift 26s linear infinite; }
+.hero h1 .w { display: inline-block; }
+.js .hero .lead { animation: rise .7s .6s cubic-bezier(.2,.8,.2,1) backwards; }
+.js .hero .ctas { animation: rise .7s .75s cubic-bezier(.2,.8,.2,1) backwards; }
+.js .hero .panel { animation: slide-in .9s .35s cubic-bezier(.2,.8,.2,1) backwards; }
+.panel { transition: transform .25s ease-out, box-shadow .25s; will-change: transform; }
+.toggle-row { margin-inline: -10px; padding-inline: 10px; border-radius: 8px; }
+.toggle-row.flash { animation: flash .9s ease-out; }
+.switch::after { transition: transform .3s cubic-bezier(.34,1.56,.64,1), width .2s; }
+.switch:active::after { width: 25px; }
+.switch[aria-checked="true"]:active::after { transform: translateX(15px); }
+#panelCount { font-variant-numeric: tabular-nums; }
+
+/* Ajánlatkérő */
+.quote { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 18px 40px -24px rgba(14,26,43,.35); }
+.qtop { display: flex; align-items: center; gap: 16px; padding: 18px 26px; border-bottom: 1px solid var(--line); }
+.qbar { flex: 1; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
+.qbar i { display: block; height: 100%; width: 0; border-radius: 99px; background: var(--accent); transition: width .5s cubic-bezier(.2,.8,.2,1); }
+.qcount { font-weight: 700; font-size: .88rem; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 3.2em; text-align: right; }
+.qbody { padding: 30px 26px 10px; min-height: 290px; display: grid; gap: 18px; align-content: start; }
+.qbody h3 { font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 800; outline: none; }
+.qhint { color: var(--muted); font-size: .95rem; margin-top: -8px; }
+.qintro { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; }
+.qintro li { position: relative; padding-left: 30px; line-height: 1.45; }
+.qintro li::before { content: ""; position: absolute; left: 0; top: .2em; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232346E8' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat; }
+.qopts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
+.qopts .opt { display: flex; align-items: center; gap: 12px; padding: 14px 16px; font-size: 1rem; min-height: 60px; }
+.qopts { grid-auto-rows: 1fr; }
+.qopts .opt::before { content: ""; flex: none; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--line); transition: border-color .2s, background .2s, box-shadow .2s; }
+.qopts.multi .opt::before { border-radius: 5px; }
+.qopts .opt[aria-pressed="true"]::before { border-color: var(--accent); background: var(--accent); box-shadow: inset 0 0 0 3px var(--surface); }
+.qbody textarea { font: 400 1rem/1.5 var(--font-body); padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); resize: vertical; width: 100%; transition: border-color .2s, box-shadow .2s; }
+.qbody textarea:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4px var(--accent-soft); }
+.qerr { padding: 0 26px; min-height: 1.4em; }
+.qfoot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 26px 24px; }
+.qsum { background: var(--paper); border-radius: 12px; padding: 16px 18px; font-size: .92rem; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.qsend { display: flex; flex-wrap: wrap; gap: 10px; }
+@keyframes q-fwd { from { opacity: 0; transform: translateX(30px); } }
+@keyframes q-back { from { opacity: 0; transform: translateX(-30px); } }
+.qbody.fwd { animation: q-fwd .4s cubic-bezier(.2,.8,.2,1); }
+.qbody.back { animation: q-back .4s cubic-bezier(.2,.8,.2,1); }
+
+/* Film */
+.hero.has-video { background: #03060B; color: #fff; padding: 96px 0 108px; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero.has-video::before { display: none; }
+.hero.has-video::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(90deg, rgba(3,6,11,.86) 0%, rgba(3,6,11,.62) 55%, rgba(3,6,11,.38) 100%); }
+.hero.has-video .wrap { z-index: 1; }
+.hero.has-video .lead { color: #C9D2E3; }
+.hero.has-video .panel { color: var(--ink); }
+.hero.has-video .btn-primary { background: #fff; color: var(--ink); border-color: #fff; }
+.hero.has-video .btn-ghost { color: #fff; border-color: rgba(255,255,255,.7); }
+.hero.has-video .btn-ghost:hover:not(:disabled) { background: #fff; color: var(--ink); }
+.hero .film-sound { z-index: 2; }
+@media (max-width: 860px) {
+  /* Telefonon a videó nem háttér, hanem egy teljes, 16:9-es sáv a nyitórész tetején; alatta sötét háttéren a szöveg */
+  .hero.has-video { padding: calc(56.25vw + 28px) 0 56px; }
+  .hero-bg { height: 56.25vw; bottom: auto; }
+  .hero.has-video::after { background: linear-gradient(to bottom, rgba(3,6,11,0) 0, rgba(3,6,11,0) calc(56.25vw - 70px), #03060B 56.25vw, #03060B 100%); }
+  .hero .film-sound { top: calc(56.25vw - 52px); bottom: auto; right: 12px; padding: 7px 12px; font-size: .8rem; }
+}
+.film-sound { position: absolute; right: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid rgba(255,255,255,.35); border-radius: 99px; background: rgba(3,6,11,.55); backdrop-filter: blur(6px); color: #fff; font: 700 .85rem var(--font-body); cursor: pointer; transition: background .2s; }
+.film-sound:hover { background: rgba(3,6,11,.8); }
+.film-video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 20px; background: #03060B; box-shadow: 0 30px 60px -30px rgba(14,26,43,.7); }
+
+
+/* Kártyák */
+.service { transition: border-color .2s; }
+.service:hover { border-color: var(--line); }
+
+
+/* Foglaló */
+.opt { transition: border-color .2s, background .2s, transform .2s cubic-bezier(.34,1.56,.64,1); }
+.opt:hover:not(:disabled) { transform: translateY(-2px); }
+.opt:active:not(:disabled) { transform: scale(.95); }
+.opt.just { animation: pop .35s cubic-bezier(.34,1.56,.64,1); }
+.opt.enter { animation: rise .35s cubic-bezier(.2,.8,.2,1) backwards; animation-delay: calc(var(--i) * 22ms); }
+.fields input { transition: border-color .2s, box-shadow .2s; }
+.fields input:focus { box-shadow: 0 0 0 4px var(--accent-soft); }
+.error.shake { animation: shake .4s; }
+.js .done > * { animation: rise .5s cubic-bezier(.2,.8,.2,1) backwards; }
+.js .done > :nth-child(2) { animation-delay: .15s; }
+.js .done > :nth-child(3) { animation-delay: .25s; }
+.js .done > :nth-child(4) { animation-delay: .35s; }
+.js .done > :nth-child(5) { animation-delay: .45s; }
+.js .done .check { animation: pop-in .55s cubic-bezier(.34,1.56,.64,1) backwards; }
+.js .done .check path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw .4s .35s ease-out forwards; }
+
+/* Kapcsolat */
+.contact { position: relative; overflow: hidden; }
+.contact > * { position: relative; }
+.contact-list a, .contact-list div { transition: background .25s, transform .25s cubic-bezier(.2,.8,.2,1); }
+.contact-list a:hover { transform: translateX(6px); }
+
+/* ===== Görgetésre induló animációk ===== */
+.js .service, .js [data-anim] { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.2,.7,.2,1) var(--dl, 0s), transform .7s cubic-bezier(.2,.7,.2,1) var(--dl, 0s); }
+.js .service.in, .js [data-anim].in { opacity: 1; transform: none; }
+.js .ref { opacity: 1; transform: none; }
+.js .ref > * { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.js .ref > p { transition-delay: .15s; }
+.js .ref.in > * { opacity: 1; transform: none; }
+.flow { --step: .7s; }
+.js .flow li > h3, .js .flow li > p { opacity: 0; transform: translateY(14px); transition: opacity .6s ease var(--dl), transform .6s cubic-bezier(.2,.7,.2,1) var(--dl); }
+.js .flow li > p { transition-delay: calc(var(--dl) + .1s); }
+.js .fl-line { transform: scaleX(0); transition: transform .6s cubic-bezier(.6,0,.2,1) var(--dl); }
+.js .fa path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.js .fa-s { transition: stroke-dashoffset .6s cubic-bezier(.5,0,.3,1) calc(var(--dl) + .45s); }
+.js .fa-t { transition: stroke-dashoffset .25s ease-out calc(var(--dl) + 1.02s); }
+.flow li { --dl: calc(var(--i) * var(--step)); }
+@media (max-width: 999px) { .flow li { --dl: 0s; } }
+.js .flow li.in > h3, .js .flow li.in > p { opacity: 1; transform: none; }
+.js .flow li.in .fl-line { transform: scaleX(1); }
+.js .flow li.in .fa path { stroke-dashoffset: 0; }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Beáll<span class="it">IT</span></a>
+    <nav class="links" aria-label="Fő menü">
+      <a href="#szolgaltatasok">Szolgáltatások</a>
+      <a href="#demo">Demó</a>
+      <a href="#ajanlat">Ajánlatkérés</a>
+      <a href="#kapcsolat">Kapcsolat</a>
+    </nav>
+    <a class="btn btn-primary btn-small" href="#ajanlat">Kérj ajánlatot</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero has-video">
+    <video class="hero-bg" id="film" poster="banner-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="beallit-banner-mobil.mp4" type="video/mp4" media="(max-width: 860px)"><source src="beallit-banner.mp4" type="video/mp4"></video>
+    <div class="wrap">
+      <div>
+        <h1><span class="w" style="--i:0">Beállítjuk</span> <span class="w" style="--i:1">a</span> <span class="w" style="--i:2">vállalkozásod</span> <span class="w" style="--i:3">digitális</span> <span class="w" style="--i:4">oldalát.</span></h1>
+        <p class="lead">Weboldal, webáruház, online foglaló, egyedi céges rendszerek és IT kisvállalkozásoknak, akár most indulsz, akár évek óta működsz. Te a munkádra figyelsz, a technikát mi intézzük.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#demo">Próbáld ki a foglalót</a>
+          <a class="btn btn-ghost" href="#szolgaltatasok">Mit tudunk beállítani?</a>
+        </div>
+        <a class="hero-promo" href="#ajanlat" data-promo><span>Bevezető ajánlat: <b>−35%</b> <span class="promo-long">az első 5 ügyfelünknek, </span>még <b data-promo-left>3</b> hely szabad</span></a>
+      </div>
+      <div class="panel" aria-label="Példa beállítások">
+        <div class="panel-head"><strong>A te vállalkozásod</strong><span id="panelCount">Beállítások</span></div>
+        <div class="toggle-row"><div>Online időpontfoglalás<small>Az ügyfél akkor foglal, amikor neki jó</small></div><button class="switch" role="switch" aria-checked="true" aria-label="Online időpontfoglalás"></button></div>
+        <div class="toggle-row"><div>Automatikus emlékeztető<small>Kevesebb elfelejtett időpont</small></div><button class="switch" role="switch" aria-checked="true" aria-label="Automatikus emlékeztető"></button></div>
+        <div class="toggle-row"><div>Google Cégprofil<small>Megtalálnak a Térképen és a keresőben</small></div><button class="switch" role="switch" aria-checked="true" aria-label="Google Cégprofil"></button></div>
+        <div class="toggle-row"><div>Saját weboldal<small>Saját domainnel, mobilra optimalizálva</small></div><button class="switch" role="switch" aria-checked="false" aria-label="Saját weboldal"></button></div>
+        <div class="toggle-row"><div>Céges e-mail<small>info@cegnev.hu a gmailes cím helyett</small></div><button class="switch" role="switch" aria-checked="false" aria-label="Céges e-mail"></button></div>
+      </div>
+    </div>
+    <button class="film-sound" id="filmSound" type="button" aria-pressed="false"><span aria-hidden="true">🔇</span> <span>Hang be</span></button>
+  </section>
+
+  <section class="block alt" id="szolgaltatasok">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Mit tudunk beállítani?</h2>
+        <p>Mielőtt bármit javasolnánk, megismerjük a vállalkozásodat és azt, hol akad el a munka. Ha pontosan tudod, mit szeretnél, aszerint készítjük el. Ha még nem, segítünk kitalálni.</p>
+      </div>
+      <div class="services">
+        <article class="service main">
+          <h3>Online időpontfoglaló <span class="tag">népszerű</span></h3>
+          <p>Fodrászoknak, kozmetikusoknak, masszőröknek és mindenkinek, aki időpontra dolgozik.</p>
+          <ul><li>foglalás telefonról, regisztráció nélkül</li><li>e-mailes visszaigazolás és emlékeztető</li><li>a saját nevedre és arculatodra szabva</li></ul>
+        </article>
+        <article class="service main">
+          <h3>Weboldal <span class="tag">népszerű</span></h3>
+          <p>Teljesen az igényeidre szabva, bármilyen vállalkozásnak: egyszerű bemutatkozó oldaltól a foglalós, űrlapos oldalig.</p>
+          <ul><li>saját domainnel</li><li>telefonon is jól néz ki</li><li>a saját arculatodra szabva</li></ul>
+        </article>
+        <article class="service">
+          <h3>Webáruház</h3>
+          <p>Online bolt, ahol a vevőid éjjel-nappal rendelhetnek, te pedig egy helyen látod a rendeléseket.</p>
+          <ul><li>termékek, készlet, rendelések egy felületen</li><li>bankkártyás fizetés és szállítás beállítása</li><li>összekötés a számlázóprogramoddal</li></ul>
+        </article>
+        <article class="service">
+          <h3>Google Cégprofil</h3>
+          <p>Megjelensz a Google Térképen és a keresőben nyitvatartással, képekkel és értékelésekkel.</p>
+        </article>
+        <article class="service">
+          <h3>Keresőoptimalizálás (SEO)</h3>
+          <p>Hogy megtaláljanak a Google-ben, amikor valaki például arra keres: „fodrász Siófok”.</p>
+          <ul><li>helyi keresésekre szabott oldal</li><li>gyors betöltés telefonon</li><li>havonta megnézzük, mire találnak rád</li></ul>
+          <p style="font-size:.85rem">Hetek, hónapok alatt hoz eredményt. Első helyet nem ígérünk.</p>
+        </article>
+        <article class="service">
+          <h3>Egyedi megoldások</h3>
+          <p>Ha nincs rá kész program, megírjuk. A szoftvert igazítjuk a te munkádhoz, nem téged a szoftverhez.</p>
+          <ul><li>árajánlat-kalkulátor, ügyfélportál</li><li>foglalás egyedi szabályokkal</li><li>meglévő programok összekötése</li></ul>
+        </article>
+        <article class="service">
+          <h3>Céges rendszerek</h3>
+          <p>Belső rendszer, ami összefogja az adminisztrációt, és kiváltja a szétszórt Excel-táblákat meg a füzeteket.</p>
+          <ul><li>ügyfél- és munkalap-nyilvántartás</li><li>raktár és készlet</li><li>beosztás, munkaidő, feladatok</li></ul>
+        </article>
+        <article class="service">
+          <h3>Automatizálás</h3>
+          <p>Az ismétlődő adminisztrációt rábízzuk a gépre: űrlapok, táblázatok, értesítések, emlékeztetők.</p>
+        </article>
+        <article class="service">
+          <h3>IT-beállítások</h3>
+          <p>Céges e-mail, nyomtató, új gép beüzemelése. Ami nálad nem működik, azt rendbe tesszük.</p>
+        </article>
+      </div>
+      <div class="startup">
+        <div><b>Most indítod a vállalkozásodat?</b> Az online részét a kezdetektől beállítjuk: weboldal, foglaló, Google Cégprofil és céges e-mail, egyben, hogy az első ügyfeleid már rendesen megtaláljanak.</div>
+        <a class="btn btn-small startup-btn" href="#ajanlat">Kérj ajánlatot</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="demo">
+    <div class="wrap demo-grid">
+      <div class="demo-copy">
+        <h2>Próbáld ki, milyen az ügyfeleidnek.</h2>
+        <p style="color:var(--muted)">Ez egy kitalált szalon foglalója. Válassz szolgáltatást, napot és időpontot, ahogy a vendéged tenné.</p>
+        <ul>
+          <li>nincs több telefonos egyeztetés munka közben</li>
+          <li>a foglalt időpontokat senki nem tudja újra lefoglalni</li>
+          <li>az ügyfél emlékeztetőt kap az időpont előtt</li>
+        </ul>
+      </div>
+
+      <div class="booking" id="booking">
+        <div class="booking-top"><strong>Minta Szalon</strong><span>DEMÓ</span></div>
+        <div class="booking-body" id="bookingForm">
+          <div class="bstep" data-step="service">
+            <button type="button" class="bstep-head" aria-expanded="false" aria-controls="bs-service">
+              <span class="bstep-num"><span>1</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              <span class="bstep-title">Szolgáltatás</span>
+              <span class="bstep-sum"></span>
+              <span class="bstep-chev" aria-hidden="true"></span>
+            </button>
+            <div class="bstep-body" id="bs-service"><div class="bstep-inner">
+              <div class="opts" id="services" role="group" aria-label="Szolgáltatás"></div>
+            </div></div>
+          </div>
+          <div class="bstep" data-step="day">
+            <button type="button" class="bstep-head" aria-expanded="false" aria-controls="bs-day">
+              <span class="bstep-num"><span>2</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              <span class="bstep-title">Nap</span>
+              <span class="bstep-sum"></span>
+              <span class="bstep-chev" aria-hidden="true"></span>
+            </button>
+            <div class="bstep-body" id="bs-day"><div class="bstep-inner">
+              <div class="opts" id="days" role="group" aria-label="Nap"></div>
+            </div></div>
+          </div>
+          <div class="bstep" data-step="slot">
+            <button type="button" class="bstep-head" aria-expanded="false" aria-controls="bs-slot">
+              <span class="bstep-num"><span>3</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              <span class="bstep-title">Időpont</span>
+              <span class="bstep-sum"></span>
+              <span class="bstep-chev" aria-hidden="true"></span>
+            </button>
+            <div class="bstep-body" id="bs-slot"><div class="bstep-inner">
+              <div class="dayline" id="dayline" hidden></div>
+              <div class="opts" id="slots" role="group" aria-label="Időpont"></div>
+              <button type="button" class="btn btn-primary btn-small bstep-next" id="slotNext" hidden>Tovább az adatokhoz</button>
+            </div></div>
+          </div>
+          <div class="bstep" data-step="data">
+            <button type="button" class="bstep-head" aria-expanded="false" aria-controls="bs-data">
+              <span class="bstep-num"><span>4</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              <span class="bstep-title">Adataid</span>
+              <span class="bstep-sum"></span>
+              <span class="bstep-chev" aria-hidden="true"></span>
+            </button>
+            <div class="bstep-body" id="bs-data"><div class="bstep-inner">
+              <div class="fields">
+                <label for="bName">Név<input id="bName" type="text" maxlength="80" autocomplete="name" placeholder="Kiss Anna"></label>
+                <label for="bEmail">E-mail<input id="bEmail" type="email" maxlength="120" autocomplete="email" placeholder="anna@pelda.hu"></label>
+              </div>
+            </div></div>
+          </div>
+          <div class="booking-foot">
+            <div class="summary" id="summary">Válassz szolgáltatást.</div>
+            <button class="btn btn-primary" id="bookBtn" disabled>Foglalás</button>
+          </div>
+          <div class="error" id="bErr" role="alert"></div>
+        </div>
+        <div class="done" id="bookingDone" hidden>
+          <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5" pathLength="1"/></svg></div>
+          <h3>Időpont lefoglalva</h3>
+          <div class="ticket" id="ticket"></div>
+          <p style="color:var(--muted);font-size:.92rem">Élesben most visszaigazoló e-mail menne ki, és egy nappal előtte emlékeztető. Ez demó: semmit nem küldtünk el, és a beírt adatokat sem tároljuk.</p>
+          <button class="btn btn-ghost btn-small" id="resetBtn" style="justify-self:start">Új foglalás</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap">
+      <div class="section-head"><h2>Munkáink</h2></div>
+      <div class="refs">
+        <article class="ref" data-anim>
+          <div class="ref-side"><span class="status ok">Elkészült</span><h3>Online időpontfoglaló és emlékeztető rendszer fodrászatnak</h3></div>
+          <p>A fodrász eddig telefonon és üzenetben kapta a foglalásokat. Munka közben kellett válaszolgatnia, és hetente többször előfordult, hogy egy vendég nem jött el. Készítettünk neki egy telefonon működő foglaló és emlékeztető rendszert, amit a vendégei egy linkről érnek el. Saját admin felületet is kapott, ahol egy helyen látja a foglalásokat, és beállítja a nyitvatartást, a szabadnapokat és a zárva tartást.</p>
+        </article>
+        <article class="ref" data-anim>
+          <div class="ref-side"><span class="status wip">Most készül</span><h3>Mobil szolgáltatás foglalási rendszerének és weboldalának fejlesztése</h3></div>
+          <p>Az ügyfeleik kiválasztják a csomagot, és foglalás előtt látják a pontos árat. A rendszer minden este kiszámolja a másnapi munkák legkevesebb utazással járó sorrendjét, a munkás a telefonján kapja meg a napi listát címmel, navigációval és az elkérendő összeggel. A család egy egyszerű kezelőfelületen intézi a naptárat, az árakat és a weboldal tartalmát.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block dark" id="folyamat">
+    <div class="wrap">
+      <div class="section-head"><h2>Hogyan dolgozunk?</h2><p>Négy lépés, az első üzenettől addig, hogy önállóan használod.</p></div>
+      <ol class="flow">
+        <li style="--i:0"><span class="fl-line" aria-hidden="true"></span><h3>Kérdőív kitöltése</h3><p>A rövid <a href="#ajanlat">ajánlatkérő kérdőívben</a> elmondod, hogyan dolgozol most, és mi zavar benne. Két perc, ingyenes, és nem kötelez semmire.</p><svg class="fa fa-h" viewBox="0 0 60 40" aria-hidden="true"><path class="fa-s" pathLength="1" d="M4 31 C 14 9, 38 2, 54 21"/><path class="fa-t" pathLength="1" d="M44 18 L55 22 L52 10"/></svg><svg class="fa fa-v" viewBox="0 0 130 72" aria-hidden="true"><path class="fa-s" pathLength="1" d="M10 4 C 4 46, 72 28, 116 62"/><path class="fa-t" pathLength="1" d="M103 63 L117 63 L113 50"/></svg></li>
+        <li style="--i:1"><span class="fl-line" aria-hidden="true"></span><h3>Ajánlat</h3><p>Pontosan leírjuk, mit állítunk be, mennyiért és mikorra.</p><svg class="fa fa-h" viewBox="0 0 60 40" aria-hidden="true"><path class="fa-s" pathLength="1" d="M4 31 C 14 9, 38 2, 54 21"/><path class="fa-t" pathLength="1" d="M44 18 L55 22 L52 10"/></svg><svg class="fa fa-v" viewBox="0 0 130 72" aria-hidden="true"><path class="fa-s" pathLength="1" d="M10 4 C 4 46, 72 28, 116 62"/><path class="fa-t" pathLength="1" d="M103 63 L117 63 L113 50"/></svg></li>
+        <li style="--i:2"><span class="fl-line" aria-hidden="true"></span><h3>Beállítás</h3><p>Elkészítjük, és közösen kipróbáljuk, mielőtt élesbe megy.</p><svg class="fa fa-h" viewBox="0 0 60 40" aria-hidden="true"><path class="fa-s" pathLength="1" d="M4 31 C 14 9, 38 2, 54 21"/><path class="fa-t" pathLength="1" d="M44 18 L55 22 L52 10"/></svg><svg class="fa fa-v" viewBox="0 0 130 72" aria-hidden="true"><path class="fa-s" pathLength="1" d="M10 4 C 4 46, 72 28, 116 62"/><path class="fa-t" pathLength="1" d="M103 63 L117 63 L113 50"/></svg></li>
+        <li style="--i:3"><span class="fl-line" aria-hidden="true"></span><h3>Betanítás és támogatás</h3><p>Megmutatjuk a használatát, és később is segítünk, ha elakadsz.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="ajanlat">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Kérj ajánlatot két perc alatt.</h2>
+        <p>Válaszolj kilenc rövid kérdésre. Ebből már tudunk személyre szabott, kötelezettség nélküli ajánlatot adni.</p>
+        <div class="promo" data-promo>
+          <p><b>Bevezető ajánlat: az első 5 ügyfelünk 35% kedvezményt kap.</b> Az ajánlatban a rendes ár mellett látod, mennyit fizetsz a kedvezménnyel. Cserébe annyit kérünk, hogy ha elégedett vagy, írj rólunk egy Google-véleményt, és a munkádat megmutathassuk a referenciáink között.</p>
+          <p class="promo-left">Még <b data-promo-left>3</b> hely szabad.</p>
+        </div>
+        <p class="referral"><b>Ismerős ajánlott minket?</b> Írd be a nevét a kérdőív végén: neked 10% kedvezmény jár az egyszeri díjból, neki egy ingyenes hónap az üzemeltetésből. A bevezető ajánlattal nem vonható össze, ilyenkor a nagyobb kedvezmény jár.</p>
+      </div>
+      <div class="quote" id="quote">
+        <div class="qtop"><div class="qbar"><i id="qFill"></i></div><span class="qcount" id="qCount"></span></div>
+        <div class="qbody" id="qBody"></div>
+        <div class="error qerr" id="qErr" role="alert"></div>
+        <div class="qfoot">
+          <button class="btn btn-ghost btn-small" id="qBack" type="button">Vissza</button>
+          <button class="btn btn-primary" id="qNext" type="button">Tovább</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="kapcsolat" style="padding-top:0">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Inkább írnál közvetlenül?</h2>
+          <p>Ha kérdésed van, vagy nem szeretnél űrlapot kitölteni, itt is elérsz minket. Egy munkanapon belül válaszolunk.</p>
+        </div>
+        <div class="contact-list">
+          <a class="c-mail" href="mailto:hello@beallit.hu?subject=%C3%89rdekl%C5%91d%C3%A9s%20a%20Be%C3%A1llIT-n%C3%A1l"><small>E-mail</small><b>hello@beallit.hu</b></a>
+          <a class="c-ig" href="https://www.instagram.com/beall.it/" target="_blank" rel="noopener noreferrer"><small>Instagram</small><b>@beall.it</b></a>
+          <a class="c-tel" href="tel:+36301909700"><small>Telefon</small><b>+36 30 190 9700</b></a>
+          <div id="areaBox"><small>Terület</small><b>Siófok és környéke</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="logo" href="#top">Beáll<span class="it">IT</span></a>
+      <p>Weboldal, online foglaló, céges rendszerek és IT kisvállalkozásoknak Siófokon és környékén.</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom"><span>© 2026 BeállIT</span><a href="adatkezeles.html#impresszum">Impresszum és adatkezelés</a></div>
+</footer>
+
+<script>
+(function () {
+  // BEVEZETŐ AJÁNLAT: ennyi hely maradt az első 5 ügyfélből. Minden új ügyfél után csökkentsd eggyel; 0-nál a sáv eltűnik.
+  var PROMO_LEFT = 3;
+  // GOOGLE CÉGPROFIL: ha elkészült, ide másold a profil linkjét (Cégprofil → Megosztás), és a „Terület” doboz kattintható lesz.
+  var CEGPROFIL_URL = '';
+  if (CEGPROFIL_URL) {
+    var ab = document.getElementById('areaBox'), al = document.createElement('a');
+    al.className = 'c-area'; al.href = CEGPROFIL_URL; al.target = '_blank'; al.rel = 'noopener noreferrer'; al.innerHTML = '<small>Terület</small><b>Siófok és környéke</b>';
+    ab.replaceWith(al);
+  }
+  // díszítő elemek a kapcsolat dobozok hover-effektjéhez
+  document.querySelectorAll('.contact-list a').forEach(function (a) { var fx = document.createElement('span'); fx.className = 'fx'; fx.setAttribute('aria-hidden', 'true'); fx.innerHTML = '<i></i><i></i><i></i><i></i>'; a.appendChild(fx); });
+  document.querySelectorAll('[data-promo-left]').forEach(function (n) { n.textContent = PROMO_LEFT; });
+  if (PROMO_LEFT <= 0) document.querySelectorAll('[data-promo]').forEach(function (n) { n.hidden = true; });
+
+  var ANIM = document.documentElement.classList.contains('js');
+
+  // Görgetésre induló animációk (szolgáltatások, munkáink, folyamat nyilakkal)
+  (function () {
+    var nodes = document.querySelectorAll('.services .service, [data-anim], .flow li');
+    if (!ANIM) return;
+    var wide = window.matchMedia('(min-width: 900px)').matches;
+    document.querySelectorAll('.services .service').forEach(function (n, i) { n.style.setProperty('--dl', (wide ? (i % 3) * 0.09 : 0) + 's'); });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.25, rootMargin: '0px 0px -8% 0px' });
+    nodes.forEach(function (n) { io.observe(n); });
+  })();
+
+  // Hero kapcsolók: betöltéskor egymás után bekapcsolnak
+  var switches = Array.prototype.slice.call(document.querySelectorAll('.switch'));
+  function updateCount() {
+    var n = switches.filter(function (s) { return s.getAttribute('aria-checked') === 'true'; }).length;
+    document.getElementById('panelCount').textContent = n + ' / ' + switches.length + ' beállítva';
+  }
+  function setSwitch(s, on) {
+    s.setAttribute('aria-checked', on ? 'true' : 'false');
+    if (on) {
+      var row = s.closest('.toggle-row');
+      row.classList.remove('flash'); void row.offsetWidth; row.classList.add('flash');
+    }
+    updateCount();
+  }
+  switches.forEach(function (s) {
+    s.addEventListener('click', function () { setSwitch(s, s.getAttribute('aria-checked') !== 'true'); });
+  });
+  if (ANIM) {
+    switches.forEach(function (s) { s.setAttribute('aria-checked', 'false'); });
+    switches.forEach(function (s, i) { setTimeout(function () { setSwitch(s, true); }, 1200 + i * 380); });
+  }
+  updateCount();
+
+  // Demó foglaló
+  var SERVICES = [
+    { id: 'noi', name: 'Női hajvágás', min: 60, price: 9500 },
+    { id: 'ferfi', name: 'Férfi hajvágás', min: 30, price: 5500 },
+    { id: 'festes', name: 'Festés', min: 120, price: 18000 },
+    { id: 'szakall', name: 'Szakálligazítás', min: 30, price: 3500 }
+  ];
+  var DAY_NAMES = ['vas', 'hét', 'kedd', 'sze', 'csüt', 'pén', 'szo'];
+  var MONTHS = ['jan.', 'febr.', 'márc.', 'ápr.', 'máj.', 'jún.', 'júl.', 'aug.', 'szept.', 'okt.', 'nov.', 'dec.'];
+  var state = { service: null, day: null, slot: null };
+  var fmt = new Intl.NumberFormat('hu-HU');
+
+  function el(id) { return document.getElementById(id); }
+
+  function nextDays() {
+    var out = [], d = new Date();
+    d.setHours(0, 0, 0, 0);
+    while (out.length < 6) {
+      d.setDate(d.getDate() + 1);
+      if (d.getDay() !== 0) out.push(new Date(d));
+    }
+    return out;
+  }
+  var DAYS = nextDays();
+
+  // Álvéletlen "foglalt" időpontok, naponta mindig ugyanazok
+  // Kitalált foglalások: naponta mindig ugyanazok; többnyire 30 percesek, néhány 1 órás, ritkán 2 órás
+  function busyFor(day, n) {
+    var s = (day.getFullYear() * 372 + day.getMonth() * 31 + day.getDate()) % 233280;
+    function rnd() { s = (s * 9301 + 49297) % 233280; return s / 233280; }
+    rnd(); rnd(); rnd();
+    var busy = [], i = 0;
+    for (var j = 0; j < n; j++) busy.push(false);
+    while (i < n) {
+      if (rnd() < 0.22) {
+        var r = rnd(), len = r < 0.55 ? 1 : (r < 0.87 ? 2 : 4);
+        for (var k = i; k < Math.min(n, i + len); k++) busy[k] = true;
+        i += len;
+      } else i++;
+    }
+    return busy;
+  }
+  // Egy kezdési időpont csak akkor választható, ha a szolgáltatás TELJES ideje alatt minden félórás sáv szabad
+  function slotsFor(day) {
+    var out = [], start = 9 * 60, end = (day.getDay() === 6 ? 14 : 18) * 60;
+    var len = Math.ceil((state.service ? state.service.min : 30) / 30);
+    var n = (end - start) / 30, busy = busyFor(day, n);
+    for (var i = 0; i + len <= n; i++) {
+      var m = start + i * 30, hh = Math.floor(m / 60), mm = m % 60, free = true;
+      for (var k = i; k < i + len; k++) if (busy[k]) free = false;
+      out.push({ label: hh + ':' + (mm === 0 ? '00' : '30'), taken: !free });
+    }
+    return out;
+  }
+
+  function optButton(html, pressed, onClick, disabled) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'opt';
+    b.innerHTML = html;
+    b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    if (disabled) b.disabled = true;
+    b.addEventListener('click', onClick);
+    return b;
+  }
+
+  function dayLabel(d) { return DAY_NAMES[d.getDay()] + ', ' + MONTHS[d.getMonth()] + ' ' + d.getDate() + '.'; }
+
+  function render(animSlots) {
+    var s = el('services'); s.innerHTML = '';
+    SERVICES.forEach(function (sv) {
+      s.appendChild(optButton(sv.name + '<small>' + sv.min + ' perc · ' + fmt.format(sv.price) + ' Ft</small>',
+        state.service === sv, function () { state.service = sv; state.slot = null; state.last = 'service'; state.pinFrom = 'service'; state.open = state.day ? 'slot' : 'day'; render(true); }));
+    });
+    var d = el('days'); d.innerHTML = '';
+    DAYS.forEach(function (day) {
+      d.appendChild(optButton(DAY_NAMES[day.getDay()] + '<small>' + MONTHS[day.getMonth()] + ' ' + day.getDate() + '.</small>',
+        state.day && state.day.getTime() === day.getTime(), function () { state.day = day; state.slot = null; state.last = 'day'; state.pinFrom = 'day'; state.open = 'slot'; render(true); }));
+    });
+    var sl = el('slots'); sl.innerHTML = '';
+    if (!state.day) {
+      sl.innerHTML = '<span class="summary">Előbb válassz napot.</span>';
+    } else {
+      slotsFor(state.day).forEach(function (t) {
+        sl.appendChild(optButton(t.label, state.slot === t.label, function () { state.slot = t.label; state.last = 'slot'; render(); }, t.taken));
+      });
+      if (!sl.querySelector('.opt:not(:disabled)')) sl.insertAdjacentHTML('beforeend', '<span class="summary" style="flex-basis:100%">Ezen a napon nincs elég hosszú szabad idősáv ehhez a szolgáltatáshoz. Válassz másik napot.</span>');
+    }
+    var group = { service: s, day: d, slot: sl }[state.last];
+    if (group) {
+      var p = group.querySelector('[aria-pressed="true"]');
+      if (p) { p.classList.add('just'); p.focus({ preventScroll: true }); }
+    }
+    if (animSlots) Array.prototype.forEach.call(sl.querySelectorAll('.opt'), function (btn, i) { btn.classList.add('enter'); btn.style.setProperty('--i', i); });
+    state.last = null;
+    var sum = el('summary');
+    if (state.service) {
+      sum.innerHTML = '<b>' + state.service.name + '</b>' + (state.day ? ' · ' + dayLabel(state.day) : '') + (state.slot ? ' ' + state.slot : '');
+    } else {
+      sum.textContent = 'Válassz szolgáltatást.';
+    }
+    el('bookBtn').disabled = !(state.service && state.day && state.slot);
+    renderDayline();
+    renderSteps();
+  }
+
+  // Lépésváltáskor az oldal mindig ugyanoda áll be: a demó kártya teteje közvetlenül a menüsor alá.
+  // A kártya teteje a lépések nyílásától/csukódásától nem mozdul, így nincs össze-vissza ugrálás.
+  function toCard() {
+    var head = document.querySelector('header.top').offsetHeight + 12, top = el('booking').getBoundingClientRect().top;
+    if (Math.abs(top - head) < 3) return;
+    var smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: window.scrollY + top - head, behavior: smooth ? 'smooth' : 'auto' });
+  }
+  // Lépések nyitása/zárása: mindig csak egy van nyitva; a későbbi lépés addig zárolt, amíg az előzőt nem választottad ki
+  var STEP_ORDER = ['service', 'day', 'slot', 'data'], prevOpen = null;
+  function stepState(k) {
+    var locked = k === 'day' ? !state.service : k === 'slot' ? !(state.service && state.day) : k === 'data' ? !state.slot : false;
+    var done = k === 'service' ? !!state.service : k === 'day' ? !!state.day : k === 'slot' ? !!state.slot : false;
+    return { locked: locked, done: done };
+  }
+  function renderSteps() {
+    var ends = state.slot && state.service ? (function () { var p = state.slot.split(':'), m = +p[0] * 60 + +p[1] + Math.ceil(state.service.min / 30) * 30; return state.slot + '–' + Math.floor(m / 60) + ':' + (m % 60 ? '30' : '00'); })() : '';
+    var sums = { service: state.service ? state.service.name + ' · ' + fmt.format(state.service.price) + ' Ft' : '', day: state.day ? dayLabel(state.day) : '', slot: ends, data: '' };
+    var moving = state.open !== prevOpen && prevOpen !== null;
+    state.pinFrom = null;
+    document.querySelectorAll('#bookingForm .bstep').forEach(function (st) {
+      var k = st.getAttribute('data-step'), ss = stepState(k), open = (state.open === k || (k === 'day' && state.open === 'slot')) && !ss.locked; // időpontválasztás közben a nap is nyitva marad
+      st.classList.toggle('open', open); st.classList.toggle('locked', ss.locked); st.classList.toggle('is-done', ss.done);
+      var head = st.querySelector('.bstep-head'); head.setAttribute('aria-expanded', open ? 'true' : 'false'); head.disabled = ss.locked;
+      st.querySelector('.bstep-body').inert = !open;
+      st.querySelector('.bstep-sum').textContent = sums[k];
+    });
+    if (moving) toCard();
+    el('slotNext').hidden = !state.slot;
+    prevOpen = state.open;
+  }
+  document.querySelectorAll('#bookingForm .bstep-head').forEach(function (h) {
+    h.addEventListener('click', function () {
+      var k = h.parentNode.getAttribute('data-step');
+      if (stepState(k).locked) return;
+      var isOpen = state.open === k || (k === 'day' && state.open === 'slot');
+      state.open = isOpen ? null : k;
+      state.pinFrom = k; // a megnyomott fejléc marad egy helyben
+      renderSteps();
+    });
+  });
+  el('slotNext').addEventListener('click', function () { state.pinFrom = 'day'; state.open = 'data'; renderSteps(); });
+
+  // Napi idővonal + csúszka: a foglalt sávok és a választott időpont egy csíkban, órákra bontva.
+  // A csíkot csak nap- vagy szolgáltatásváltáskor építjük újra, húzás közben csak a kék blokk mozog.
+  function hm(m) { return Math.floor(m / 60) + ':' + (m % 60 ? '30' : '00'); }
+  var DL = { key: '', n: 0, start: 9 * 60 }, dragging = false;
+  function renderDayline() {
+    var dl = el('dayline');
+    if (!state.day) { dl.hidden = true; DL.key = ''; return; }
+    dl.hidden = false;
+    var start = 9 * 60, end = (state.day.getDay() === 6 ? 14 : 18) * 60, n = (end - start) / 30;
+    var key = state.day.getTime() + '|' + (state.service ? state.service.id : '');
+    if (key !== DL.key) {
+      DL.key = key; DL.n = n;
+      var busy = busyFor(state.day, n), parts = [], blocks = '';
+      for (var i = 0; i < n;) {
+        if (!busy[i]) { i++; continue; }
+        var j = i; while (j < n && busy[j]) j++;
+        var span = hm(start + i * 30) + '–' + hm(start + j * 30);
+        parts.push(span);
+        blocks += '<i class="dl-busy" style="left:' + (i / n * 100) + '%;width:' + ((j - i) / n * 100) + '%"></i>';
+        i = j;
+      }
+      var hours = '';
+      for (var h = 0; h <= n; h += 2) hours += '<span style="left:' + (h / n * 100) + '%">' + (9 + h / 2) + '</span>';
+      dl.innerHTML = '<div class="dl-read" aria-live="polite"><strong id="dlTime"></strong><small id="dlHint"></small></div>' +
+        '<div class="dl-track" id="dlTrack" title="Húzd a kék csúszkát, vagy koppints egy szabad helyre" aria-label="Napi beosztás ' + (end / 60) + ' óráig. Foglalt: ' + (parts.length ? parts.join(', ') : 'semmi') + '.">' + blocks +
+        '<span class="dl-pick" id="dlPick" hidden></span></div>' +
+        '<div class="dl-hours" aria-hidden="true">' + hours + '</div>' +
+        '<div class="dl-legend" aria-hidden="true"><span><i style="background:var(--signal)"></i>Foglalt</span><span><i style="background:#D3D9E2"></i>Szabad</span><span><i style="background:var(--accent)"></i>A te időpontod</span></div>';
+    }
+    updatePick();
+  }
+  function updatePick() {
+    var pick = el('dlPick'), t = el('dlTime'), hint = el('dlHint');
+    if (!pick) return;
+    var n = DL.n, start = DL.start;
+    if (state.slot && state.service) {
+      var p = state.slot.split(':'), si = (+p[0] * 60 + +p[1] - start) / 30, len = Math.ceil(state.service.min / 30);
+      pick.hidden = false;
+      pick.style.left = (si / n * 100) + '%';
+      pick.style.width = (len / n * 100) + '%';
+      t.className = ''; t.textContent = state.slot + '–' + hm(start + (si + len) * 30);
+      hint.textContent = dragging ? 'Engedd el a foglaláshoz' : 'Húzd a csúszkát, vagy válassz lent';
+    } else {
+      pick.hidden = true;
+      t.className = 'empty'; t.textContent = state.service ? 'Válassz időpontot' : 'Válassz szolgáltatást';
+      hint.textContent = state.service ? 'Koppints a csíkra, vagy válassz lent' : '';
+    }
+  }
+  // A ujj/egér helyéhez legközelebbi olyan kezdés, ahol a teljes szolgáltatás elfér
+  function slotAt(clientX) {
+    var tr = el('dlTrack'); if (!tr || !state.day || !state.service) return null;
+    var r = tr.getBoundingClientRect(), len = Math.ceil(state.service.min / 30);
+    var want = (clientX - r.left) / r.width * DL.n - len / 2;
+    var best = null, bd = Infinity;
+    slotsFor(state.day).forEach(function (s, i) {
+      if (s.taken) return;
+      var d = Math.abs(i - want);
+      if (d < bd) { bd = d; best = s; }
+    });
+    return best;
+  }
+  function moveTo(clientX) {
+    var s = slotAt(clientX);
+    if (s && s.label !== state.slot) {
+      state.slot = s.label;
+      updatePick();
+      var sum = el('summary');
+      sum.innerHTML = '<b>' + state.service.name + '</b> · ' + dayLabel(state.day) + ' ' + state.slot;
+      el('bookBtn').disabled = false;
+      if (navigator.vibrate) { try { navigator.vibrate(6); } catch (e) {} }
+    }
+  }
+  var dlEl = el('dayline');
+  dlEl.addEventListener('pointerdown', function (e) {
+    var tr = e.target.closest ? e.target.closest('.dl-track') : null;
+    if (!tr || !state.service) return;
+    dragging = true;
+    tr.classList.add('dragging');
+    try { tr.setPointerCapture(e.pointerId); } catch (err) {}
+    moveTo(e.clientX);
+  });
+  dlEl.addEventListener('pointermove', function (e) { if (dragging) moveTo(e.clientX); });
+  function endDrag() {
+    if (!dragging) return;
+    dragging = false;
+    var tr = el('dlTrack'); if (tr) tr.classList.remove('dragging');
+    render();
+  }
+  dlEl.addEventListener('pointerup', endDrag);
+  dlEl.addEventListener('pointercancel', endDrag);
+  dlEl.addEventListener('lostpointercapture', endDrag);
+
+  function shake() { var e = el('bErr'); e.classList.remove('shake'); void e.offsetWidth; e.classList.add('shake'); }
+
+  el('bookBtn').addEventListener('click', function () {
+    var name = el('bName').value.trim(), email = el('bEmail').value.trim();
+    if (!name) { el('bErr').textContent = 'Add meg a neved, hogy tudjuk, kit várunk.'; el('bName').focus(); shake(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { el('bErr').textContent = 'Az e-mail cím nem tűnik helyesnek. Ide küldenénk a visszaigazolást.'; el('bEmail').focus(); shake(); return; }
+    el('bErr').textContent = '';
+    el('ticket').innerHTML = '<b>' + state.service.name + '</b>' +
+      '<span>' + dayLabel(state.day) + ' ' + state.slot + ' · ' + state.service.min + ' perc</span>' +
+      '<span>' + fmt.format(state.service.price) + ' Ft, fizetés a helyszínen</span>' +
+      '<span style="color:var(--muted)">' + escH(name) + ', ' + escH(email) + '</span>';
+    el('bookingForm').hidden = true;
+    el('bookingDone').hidden = false;
+    showBooking();
+  });
+
+  // A visszaigazolás sokkal rövidebb, mint az űrlap: ha a kártya teteje kicsúszott a képből,
+  // visszagörgetünk rá, hogy ne a lenti rész (Munkáink) legyen előttünk
+  function showBooking() { toCard(); }
+
+  el('resetBtn').addEventListener('click', function () {
+    state = { service: null, day: null, slot: null, open: 'service' };
+    prevOpen = null;
+    el('bName').value = ''; el('bEmail').value = '';
+    el('bookingDone').hidden = true;
+    el('bookingForm').hidden = false;
+    render();
+    showBooking();
+  });
+
+  // Kiinduló állapot: csak az első lépés (szolgáltatás) van nyitva
+  state.open = 'service';
+  render();
+
+  // Görgetésjelző, fejléc
+  var bar = el('progress'), header = document.querySelector('header.top'), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+    header.classList.toggle('scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  // Hullám a gombokon kattintáskor
+  document.querySelectorAll('.btn').forEach(function (b) {
+    b.addEventListener('pointerdown', function (e) {
+      if (b.disabled) return;
+      var r = b.getBoundingClientRect(), dot = document.createElement('span');
+      dot.className = 'ripple';
+      dot.style.left = (e.clientX - r.left) + 'px';
+      dot.style.top = (e.clientY - r.top) + 'px';
+      b.appendChild(dot);
+      dot.addEventListener('animationend', function () { dot.remove(); });
+      setTimeout(function () { dot.remove(); }, 900);
+    });
+  });
+
+  // Fény a kapcsolat dobozban az egér alatt
+  var contact = document.querySelector('.contact');
+  contact.addEventListener('pointermove', function (e) {
+    var r = contact.getBoundingClientRect();
+    contact.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    contact.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+
+  if ('IntersectionObserver' in window) {
+    // Aktív menüpont: a görgetési pozícióból számoljuk, így lefelé és felfelé görgetve is ugyanúgy, kihagyás nélkül vált.
+    // Az a rész az aktív, amelyiknek a teteje már a képernyő felső 40%-a fölé ért; az oldal alján mindig az utolsó.
+    var navLinks = document.querySelectorAll('nav.links a');
+    var navSecs = Array.prototype.map.call(navLinks, function (a) { return document.querySelector(a.getAttribute('href')); });
+    var navTick = false;
+    function updateActive() {
+      navTick = false;
+      var line = window.innerHeight * 0.4, cur = -1;
+      navSecs.forEach(function (sec, i) { if (sec && sec.getBoundingClientRect().top <= line) cur = i; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) cur = navSecs.length - 1;
+      navLinks.forEach(function (a, i) { a.classList.toggle('active', i === cur); });
+    }
+    window.addEventListener('scroll', function () { if (!navTick) { navTick = true; requestAnimationFrame(updateActive); } }, { passive: true });
+    window.addEventListener('resize', updateActive);
+    updateActive();
+  }
+
+  if (ANIM) {
+    // A panel enyhén az egér felé dől
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      var hero = document.querySelector('.hero'), panel = document.querySelector('.panel');
+      var clamp = function (v) { return Math.max(-7, Math.min(7, v)); };
+      hero.addEventListener('pointermove', function (e) {
+        var r = panel.getBoundingClientRect();
+        var x = (e.clientX - (r.left + r.width / 2)) / r.width, y = (e.clientY - (r.top + r.height / 2)) / r.height;
+        panel.style.transform = 'perspective(900px) rotateY(' + clamp(x * 6) + 'deg) rotateX(' + clamp(-y * 6) + 'deg)';
+      });
+      hero.addEventListener('pointerleave', function () { panel.style.transform = ''; });
+    }
+  }
+
+  // ===== Ajánlatkérő =====
+  // Web3Forms hozzáférési kulcs: a web3forms.com oldalon kapod meg az e-mail-címedre.
+  // Erre a címre érkeznek az ajánlatkérések. Amíg üres, a látogató maga küldi el e-mailben.
+  var WEB3FORMS_KEY = 'f83b705c-36c1-4d7e-9c27-ea9597c60523';
+  var FORM_ENDPOINT = WEB3FORMS_KEY ? 'https://api.web3forms.com/submit' : '';
+  var QUOTE_EMAIL = 'hello@beallit.hu';
+  var Q = [
+    { id: 'tev', label: 'Tevékenység', q: 'Mivel foglalkozik a vállalkozásod?', type: 'one', other: true,
+      opts: ['Fodrászat, barber', 'Kozmetika, szépségápolás', 'Masszázs, egészség', 'Edzés, oktatás', 'Vendéglátás', 'Szerviz, szerelés'] },
+    { id: 'kor', label: 'A vállalkozás kora', q: 'Mióta működik a vállalkozásod?', type: 'one',
+      opts: ['Most indul, vagy még csak tervezem', 'Kevesebb mint egy éve', '1–5 éve', 'Több mint 5 éve'] },
+    { id: 'meret', label: 'Létszám', q: 'Hányan dolgoztok?', type: 'one', opts: ['Egyedül dolgozom', '2–5 fő', '6–15 fő', '15 főnél többen'] },
+    { id: 'most', label: 'Így érik el most', q: 'Hogyan érnek el most az ügyfeleid?', hint: 'Több is jelölhető.', type: 'multi',
+      opts: ['Telefonon', 'Messengeren vagy Instagramon', 'Személyesen', 'E-mailben', 'Online foglalón keresztül'] },
+    { id: 'megvan', label: 'Már megvan', q: 'Mi van már meg ezek közül?', hint: 'Több is jelölhető.', type: 'multi', none: 'Még egyik sincs',
+      opts: ['Weboldal', 'Google Cégprofil', 'Facebook- vagy Instagram-oldal', 'Saját domain és céges e-mail', 'Online időpontfoglaló'] },
+    { id: 'kell', label: 'Ebben kér segítséget', q: 'Miben segítsünk?', hint: 'Több is jelölhető.', type: 'multi', none: 'Nem tudom, tanácsot kérek',
+      opts: ['Online időpontfoglaló', 'Weboldal', 'Webáruház', 'Egyedi megoldás vagy céges rendszer', 'Google Cégprofil', 'Keresőoptimalizálás (SEO)', 'Automatizálás', 'Céges e-mail és eszközök beállítása'] },
+    { id: 'gond', label: 'Ami most zavarja', q: 'Mi zavar most a legjobban?', hint: 'Pár mondat elég. Ki is hagyhatod.', type: 'text',
+      ph: 'Pl. munka közben kell válaszolnom az üzenetekre, és gyakran nem jönnek el a vendégek.' },
+    { id: 'mikor', label: 'Határidő', q: 'Mikorra lenne rá szükséged?', type: 'one', opts: ['Minél előbb', 'Egy hónapon belül', 'Ráér', 'Egyelőre csak érdeklődöm'] },
+    { id: 'adat', q: 'Hova küldjük az ajánlatot?', type: 'contact' }
+  ];
+  // 0. kártya: rövid bevezető, mielőtt az első kérdés jön
+  Q.unshift({ id: 'start', type: 'intro', q: 'Mielőtt elkezded',
+    hint: 'Ebből a pár kérdésből értjük meg, hogyan dolgozol most, és mire lenne szükséged.',
+    items: ['9 rövid kérdés, nagyjából 2 perc', 'A legtöbbre egy koppintással válaszolsz', 'Ha valamiben bizonytalan vagy, nem baj: az ajánlat előtt úgyis átbeszéljük', 'Elküldés előtt látod az összefoglalót, és bármit módosíthatsz', 'Ingyenes, és semmire nem kötelez'] });
+  var ans = {}, qi = 0, qDone = false, qTimer = null, QN = Q.length - 1; // QN: a valódi kérdések száma
+  function escH(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
+  function qAnim(dir) { var b = el('qBody'); b.classList.remove('fwd', 'back'); if (dir) { void b.offsetWidth; b.classList.add(dir); } }
+  function qErrShow(msg) { var e = el('qErr'); e.textContent = msg; e.classList.remove('shake'); void e.offsetWidth; e.classList.add('shake'); }
+
+  function qRender(dir) {
+    var q = Q[qi], html = '<h3 id="qTitle" tabindex="-1">' + q.q + '</h3>' + (q.hint ? '<p class="qhint">' + q.hint + '</p>' : '');
+    if (q.type === 'intro') {
+      html += '<ul class="qintro">' + q.items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul>';
+    } else if (q.type === 'one' || q.type === 'multi') {
+      var all = q.opts.concat(q.none ? [q.none] : []).concat(q.other ? ['Egyéb'] : []);
+      html += '<div class="qopts' + (q.type === 'multi' ? ' multi' : '') + '" role="group" aria-labelledby="qTitle">';
+      all.forEach(function (o) {
+        var on = q.type === 'one' ? ans[q.id] === o : (ans[q.id] || []).indexOf(o) >= 0;
+        html += '<button type="button" class="opt" aria-pressed="' + on + '" data-v="' + escH(o) + '">' + escH(o) + '</button>';
+      });
+      html += '</div>';
+      if (q.other && ans[q.id] === 'Egyéb') html += '<div class="fields" style="grid-template-columns:1fr"><label for="qOther">Mivel foglalkozol?<input id="qOther" type="text" maxlength="120" value="' + escH(ans[q.id + '_egyeb']) + '"></label></div>';
+    } else if (q.type === 'text') {
+      html += '<textarea id="qText" rows="4" maxlength="2000" aria-labelledby="qTitle" placeholder="' + escH(q.ph) + '">' + escH(ans[q.id]) + '</textarea>';
+    } else {
+      html += '<div class="fields">' +
+        '<label for="qName">Neved<input id="qName" type="text" maxlength="80" autocomplete="name" value="' + escH(ans.nev) + '"></label>' +
+        '<label for="qBiz">Vállalkozás neve<input id="qBiz" type="text" maxlength="120" autocomplete="organization" value="' + escH(ans.ceg) + '"></label>' +
+        '<label for="qEmail">E-mail<input id="qEmail" type="email" maxlength="120" autocomplete="email" value="' + escH(ans.email) + '"></label>' +
+        '<label for="qPhone">Telefon (nem kötelező)<input id="qPhone" type="tel" maxlength="30" autocomplete="tel" value="' + escH(ans.tel) + '"></label>' +
+        '<label for="qRef" style="grid-column:1/-1">Ki ajánlott minket? (nem kötelező)<input id="qRef" type="text" maxlength="120" placeholder="Az ismerősöd neve vagy vállalkozása" value="' + escH(ans.ajanlo) + '"></label>' +
+        '</div><p class="qhint" style="margin-top:0">Az adataidat csak az ajánlat elkészítéséhez használjuk. Részletek az <a href="adatkezeles.html" target="_blank" rel="noopener">adatkezelési tájékoztatóban</a>.</p>';
+    }
+    el('qBody').innerHTML = html;
+    qAnim(dir);
+    el('qFill').style.width = (Math.max(0, qi - 1) / (QN - 1) * 100) + '%'; // bevezetőnél és első kérdésnél üres, az utolsó (elérhetőségek) lépésnél tele
+    el('qCount').textContent = qi + ' / ' + QN;
+    el('qBack').textContent = 'Vissza';
+    el('qBack').style.visibility = qi === 0 ? 'hidden' : 'visible';
+    el('qNext').hidden = false;
+    el('qNext').textContent = qi === 0 ? 'Kezdjük' : qi === Q.length - 1 ? 'Ajánlatkérés elküldése' : 'Tovább';
+    el('qErr').textContent = '';
+  }
+
+  function qSave() {
+    var q = Q[qi];
+    if (q.type === 'text' && el('qText')) ans[q.id] = el('qText').value.trim();
+    if (q.other && el('qOther')) ans[q.id + '_egyeb'] = el('qOther').value.trim();
+    if (q.type === 'contact' && el('qName')) {
+      ans.nev = el('qName').value.trim(); ans.ceg = el('qBiz').value.trim();
+      ans.email = el('qEmail').value.trim(); ans.tel = el('qPhone').value.trim(); ans.ajanlo = el('qRef').value.trim();
+    }
+  }
+  function qValid() {
+    var q = Q[qi];
+    if (q.type === 'one') {
+      if (!ans[q.id]) return 'Válassz egyet a folytatáshoz.';
+      if (ans[q.id] === 'Egyéb' && !ans[q.id + '_egyeb']) return 'Írd be röviden, mivel foglalkozol.';
+    }
+    if (q.type === 'multi' && !(ans[q.id] || []).length) return 'Jelölj be legalább egyet.';
+    if (q.type === 'contact') {
+      if (!ans.nev) return 'Add meg a neved, hogy tudjuk, kinek írunk.';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ans.email || '')) return 'Az e-mail cím nem tűnik helyesnek. Ide küldjük az ajánlatot.';
+    }
+    return '';
+  }
+  function qGo(d) {
+    clearTimeout(qTimer);
+    if (qDone) { qDone = false; qRender('back'); return; }
+    qSave();
+    if (d > 0) {
+      var err = qValid();
+      if (err) { qErrShow(err); return; }
+      if (qi === Q.length - 1) { qFinish(); return; }
+    }
+    qi = Math.max(0, qi + d);
+    qRender(d > 0 ? 'fwd' : 'back');
+    el('qTitle').focus({ preventScroll: true });
+  }
+
+  function qSummary() {
+    var L = ['Ajánlatkérés a beallit.hu oldalról', ''];
+    Q.forEach(function (q) {
+      if (q.type === 'contact' || q.type === 'intro') return;
+      var v = ans[q.id];
+      if (q.other && v === 'Egyéb') v = ans[q.id + '_egyeb'];
+      if (Array.isArray(v)) v = v.join(', ');
+      if (v) L.push(q.label + ': ' + v);
+    });
+    L.push('', 'Név: ' + ans.nev);
+    if (ans.ceg) L.push('Vállalkozás: ' + ans.ceg);
+    L.push('E-mail: ' + ans.email);
+    if (ans.tel) L.push('Telefon: ' + ans.tel);
+    if (ans.ajanlo) L.push('Ajánlotta: ' + ans.ajanlo);
+    return L.join('\n');
+  }
+  function qEndState() {
+    qDone = true;
+    el('qFill').style.width = '100%';
+    el('qCount').textContent = 'Kész';
+    el('qNext').hidden = true;
+    el('qBack').textContent = 'Módosítom a válaszaimat';
+    el('qBack').style.visibility = 'visible';
+    el('qErr').textContent = '';
+    qAnim('fwd');
+  }
+  function qManual(text, failed) {
+    el('qBody').innerHTML = '<h3 id="qTitle" tabindex="-1">Már csak el kell küldened.</h3>' +
+      '<p class="qhint">' + (failed ? 'Az automatikus küldés most nem sikerült. ' : '') + 'Összeállítottuk az ajánlatkérésed. Küldd el a <b>' + QUOTE_EMAIL + '</b> címre: nyisd meg a leveleződben, vagy másold ki a szöveget.</p>' +
+      '<div class="qsum" id="qSum"></div>' +
+      '<div class="qsend"><a class="btn btn-primary" href="mailto:' + QUOTE_EMAIL + '?subject=' + encodeURIComponent('Ajánlatkérés: ' + (ans.ceg || ans.nev)) + '&body=' + encodeURIComponent(text) + '">Megnyitás e-mailben</a>' +
+      '<button class="btn btn-ghost" id="qCopy" type="button">Szöveg másolása</button></div>';
+    el('qSum').textContent = text;
+    el('qCopy').addEventListener('click', function () {
+      var btn = el('qCopy');
+      function manual() {
+        var r = document.createRange(); r.selectNodeContents(el('qSum'));
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Kijelöltük, másold ki (Ctrl+C)';
+      }
+      try { navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Kimásolva ✓'; }, manual); } catch (e) { manual(); }
+    });
+    qEndState();
+    el('qTitle').focus({ preventScroll: true });
+  }
+  function qFinish() {
+    var text = qSummary();
+    if (!FORM_ENDPOINT) { qManual(text, false); return; }
+    el('qNext').disabled = true; el('qNext').textContent = 'Küldés…';
+    fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ access_key: WEB3FORMS_KEY, from_name: 'BeállIT ajánlatkérő', subject: 'Ajánlatkérés: ' + (ans.ceg || ans.nev), name: ans.nev, email: ans.email, message: text, botcheck: '' }) })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.success) throw new Error(j.message || r.status); }); })
+      .then(function () {
+        el('qNext').disabled = false;
+        el('qBody').innerHTML = '<h3 id="qTitle" tabindex="-1">Megkaptuk, köszönjük!</h3><p class="qhint">Egy munkanapon belül válaszolunk erre a címre: <b>' + escH(ans.email) + '</b></p><div class="qsum" id="qSum"></div>';
+        el('qSum').textContent = text;
+        qEndState();
+        el('qBack').style.visibility = 'hidden';
+      })
+      .catch(function () { el('qNext').disabled = false; qManual(text, true); });
+  }
+
+  el('qBody').addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('.opt') : null;
+    if (!b || qDone) return;
+    var q = Q[qi], v = b.getAttribute('data-v');
+    qSave();
+    if (q.type === 'one') {
+      ans[q.id] = v;
+    } else {
+      var a = (ans[q.id] || []).slice();
+      if (v === q.none) a = a.indexOf(v) >= 0 ? [] : [v];
+      else {
+        a = a.filter(function (x) { return x !== q.none; });
+        var i = a.indexOf(v);
+        if (i >= 0) a.splice(i, 1); else a.push(v);
+      }
+      ans[q.id] = a;
+    }
+    qRender();
+    var again = null;
+    el('qBody').querySelectorAll('.opt').forEach(function (o) { if (o.getAttribute('data-v') === v) again = o; });
+    if (again) { if (again.getAttribute('aria-pressed') === 'true') again.classList.add('just'); again.focus({ preventScroll: true }); }
+    if (q.type === 'one') {
+      if (q.other && v === 'Egyéb') el('qOther').focus({ preventScroll: true });
+      else { clearTimeout(qTimer); qTimer = setTimeout(function () { qGo(1); }, 320); }
+    }
+  });
+  el('qBody').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.tagName === 'INPUT') { e.preventDefault(); qGo(1); }
+  });
+  el('qNext').addEventListener('click', function () { qGo(1); });
+  el('qBack').addEventListener('click', function () { qGo(-1); });
+  qRender();
+
+  // Film: csak akkor megy, amikor látszik; csökkentett mozgásnál kézzel indítható
+  var film = el('film'), snd = el('filmSound');
+  // A gomb: ha a videó áll (letiltott automatikus lejátszás vagy csökkentett mozgás), elindítja; ha megy, a hangot kapcsolja.
+  function sndLabel() {
+    if (film.paused) { snd.setAttribute('aria-pressed', 'false'); snd.innerHTML = '<span aria-hidden="true">▶</span> <span>Lejátszás</span>'; return; }
+    snd.setAttribute('aria-pressed', String(!film.muted));
+    snd.innerHTML = film.muted ? '<span aria-hidden="true">🔇</span> <span>Hang be</span>' : '<span aria-hidden="true">🔊</span> <span>Hang ki</span>';
+  }
+  function tryPlay() { film.muted = film.muted !== false; var pp = film.play(); if (pp && pp.catch) pp.catch(function () { sndLabel(); }); }
+  film.addEventListener('playing', sndLabel);
+  film.addEventListener('pause', sndLabel);
+  snd.addEventListener('click', function () {
+    if (film.paused) { tryPlay(); return; }
+    film.muted = !film.muted;
+    sndLabel();
+  });
+  setTimeout(sndLabel, 1500);
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    film.removeAttribute('autoplay'); film.pause(); sndLabel();
+  } else if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (en) {
+      if (en[0].isIntersecting) { if (film.dataset.started !== 'no') tryPlay(); } else film.pause();
+    }, { threshold: 0.25 }).observe(film);
+  }
+})();
+</script>
+</body>
+</html>
