@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-sQoh3vGNs4fslpkoj6l0S9aSlb5xOKPR3LCIoTHRfGk='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-mDstgoK9PfHJXfEhdPOT+28QyQ28304rVJCskQzJkJU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BeállIT – Weboldal, online foglaló és IT kisvállalkozásoknak | Siófok</title>
@@ -386,14 +386,14 @@ nav.links a.active { color: var(--accent); }
 .qbar { flex: 1; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
 .qbar i { display: block; height: 100%; width: 0; border-radius: 99px; background: var(--accent); transition: width .5s cubic-bezier(.2,.8,.2,1); }
 .qcount { font-weight: 700; font-size: .88rem; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 3.2em; text-align: right; }
-.qbody { padding: 30px 26px 10px; min-height: 290px; display: grid; gap: 18px; align-content: start; }
-.qbody h3 { font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 800; outline: none; }
+.qbody { padding: 26px 26px 8px; min-height: 250px; display: grid; gap: 16px; align-content: start; }
+.qbody h3 { font-size: clamp(1.3rem, 2.6vw, 1.55rem); line-height: 1.2; font-weight: 800; outline: none; }
 .qhint { color: var(--muted); font-size: .95rem; margin-top: -8px; }
 .qintro { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 10px; }
 .qintro li { position: relative; padding-left: 30px; line-height: 1.45; }
 .qintro li::before { content: ""; position: absolute; left: 0; top: .2em; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232346E8' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat; }
-.qopts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
-.qopts .opt { display: flex; align-items: center; gap: 12px; padding: 14px 16px; font-size: 1rem; min-height: 60px; }
+.qopts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 8px; }
+.qopts .opt { display: flex; align-items: center; gap: 12px; padding: 12px 14px; font-size: .96rem; min-height: 52px; text-align: left; }
 .qopts { grid-auto-rows: 1fr; }
 .qopts .opt::before { content: ""; flex: none; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--line); transition: border-color .2s, background .2s, box-shadow .2s; }
 .qopts.multi .opt::before { border-radius: 5px; }
@@ -480,6 +480,20 @@ nav.links a.active { color: var(--accent); }
 .js .flow li.in > h3, .js .flow li.in > p { opacity: 1; transform: none; }
 .js .flow li.in .fl-line { transform: scaleX(1); }
 .js .flow li.in .fa path { stroke-dashoffset: 0; }
+
+/* Ajánlatkérés: gépen bal oldalt a szöveg, jobb oldalt a kompakt kérdőív */
+.qgrid { display: grid; gap: 28px; }
+.qgrid .section-head { margin-bottom: 0; }
+.qgrid .promo, .qgrid .referral { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+.qgrid .quote { width: 100%; max-width: 640px; }
+@media (min-width: 1000px) {
+  .qgrid { grid-template-columns: minmax(0, 1fr) minmax(0, 600px); gap: 56px; align-items: start; }
+  .qgrid .section-head { position: sticky; top: 96px; }
+  .qgrid .section-head > h2, .qgrid .section-head > p { max-width: none; }
+}
+@media (max-width: 560px) { .qtop { padding: 14px 18px; } .qbody { padding: 22px 18px 6px; min-height: 0; } .qfoot { padding: 8px 18px 20px; } }
+.quote .qtop { transition: opacity .3s; }
+.quote.is-intro .qtop { display: none; }
 </style>
 </head>
 <body>
@@ -691,7 +705,7 @@ nav.links a.active { color: var(--accent); }
   </section>
 
   <section class="block" id="ajanlat">
-    <div class="wrap">
+    <div class="wrap qgrid">
       <div class="section-head">
         <h2>Kérj ajánlatot két perc alatt.</h2>
         <p>Válaszolj kilenc rövid kérdésre. Ebből már tudunk személyre szabott, kötelezettség nélküli ajánlatot adni.</p>
@@ -1192,8 +1206,9 @@ nav.links a.active { color: var(--accent); }
     }
     el('qBody').innerHTML = html;
     qAnim(dir);
-    el('qFill').style.width = (Math.max(0, qi - 1) / (QN - 1) * 100) + '%'; // bevezetőnél és első kérdésnél üres, az utolsó (elérhetőségek) lépésnél tele
+    el('qFill').style.width = (qi / QN * 100) + '%'; // az első kérdésnél már egy kicsit töltve, az utolsó (elérhetőségek) lépésnél tele
     el('qCount').textContent = qi + ' / ' + QN;
+    el('quote').classList.toggle('is-intro', qi === 0); // a nyitókártyán nincs csík
     el('qBack').textContent = 'Vissza';
     el('qBack').style.visibility = qi === 0 ? 'hidden' : 'visible';
     el('qNext').hidden = false;
@@ -1256,6 +1271,7 @@ nav.links a.active { color: var(--accent); }
   function qEndState() {
     qDone = true;
     el('qFill').style.width = '100%';
+    el('quote').classList.remove('is-intro');
     el('qCount').textContent = 'Kész';
     el('qNext').hidden = true;
     el('qBack').textContent = 'Módosítom a válaszaimat';
