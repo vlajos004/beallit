@@ -3,7 +3,7 @@
    A saját látogatásaidat így kapcsolod ki ezen a böngészőn: nyisd meg a https://beallit.hu/#nostat címet
    (visszakapcsolás: #stat). */
 (function () {
-  var GC_CODE = '';
+  var GC_CODE = 'ezegyfiok';
   var host = location.hostname.replace(/^www\./, '');
   var off = false;
   try {
