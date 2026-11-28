@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-RZPg9JPw5hzgKOGVTU9BjNSqwX0cgU3y9pmDG+VCR+0='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-5w0HTugpB9o8WirM6Z7XZwOnrfXdt5iVLZCjNXdPwpg=' 'sha256-53DkF/6367fS5fcJJBGpZIAWRCyfHMOr9GFt5E0nENo='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src https://api.web3forms.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BeállIT – Weboldal, online foglaló és IT kisvállalkozásoknak | Siófok</title>
@@ -411,6 +411,32 @@ nav.links a.active { color: var(--accent); }
 @keyframes q-back { from { opacity: 0; transform: translateX(-30px); } }
 .qbody.fwd { animation: q-fwd .4s cubic-bezier(.2,.8,.2,1); }
 .qbody.back { animation: q-back .4s cubic-bezier(.2,.8,.2,1); }
+/* Kérdőív felugró ablakban: telefonon teljes képernyő, nagy kijelzőn középre */
+html.q-lock, html.q-lock body { overflow: hidden; }
+.qdlg { padding: 0; border: 0; background: transparent; color: inherit; width: min(600px, calc(100% - 32px)); max-width: none; max-height: min(760px, calc(100dvh - 48px)); margin: auto; overflow: visible; }
+.qdlg::backdrop { background: rgba(8,14,26,.58); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.qdlg[open] { animation: q-pop .38s cubic-bezier(.2,.8,.2,1); }
+.qdlg[open]::backdrop { animation: q-fade .3s ease; }
+.qdlg.closing { animation: q-out .22s ease forwards; }
+.qdlg.closing::backdrop { animation: q-fade .22s ease reverse forwards; }
+@keyframes q-pop { from { opacity: 0; transform: translateY(24px) scale(.97); } }
+@keyframes q-out { to { opacity: 0; transform: translateY(16px) scale(.98); } }
+@keyframes q-fade { from { opacity: 0; } }
+.qdlg .quote { display: flex; flex-direction: column; max-height: inherit; height: auto; box-shadow: 0 40px 90px -30px rgba(0,0,0,.6); }
+.qdlg .qtop, .qdlg .qerr, .qdlg .qfoot { flex: none; }
+.qdlg .qbody { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
+.qdlg .qfoot { border-top: 1px solid var(--line); padding-top: 14px; }
+.qclose { flex: none; width: 36px; height: 36px; margin: -6px -10px -6px 0; border: 0; border-radius: 50%; background: transparent; color: var(--muted); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s; }
+.qclose:hover, .qclose:focus-visible { background: var(--paper); color: var(--ink); }
+.qclose svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+@media (max-width: 640px) {
+  .qdlg { width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; }
+  .qdlg .quote { height: 100%; border-radius: 0; border: 0; }
+  .qdlg .qtop { padding-top: max(14px, env(safe-area-inset-top)); }
+  .qdlg .qfoot { padding-bottom: max(18px, env(safe-area-inset-bottom)); }
+  .qdlg[open] { animation-name: q-up; }
+  @keyframes q-up { from { opacity: 0; transform: translateY(40px); } }
+}
 
 /* Film */
 .hero.has-video { background: #03060B; color: #fff; padding: 96px 0 108px; }
@@ -496,7 +522,7 @@ nav.links a.active { color: var(--accent); }
 }
 @media (max-width: 560px) { .qtop { padding: 14px 18px; } .qbody { padding: 22px 18px 6px; min-height: 0; } .qfoot { padding: 8px 18px 20px; } }
 .quote .qtop { transition: opacity .3s; }
-.quote.is-intro .qtop { display: none; }
+.qstart .qbody { min-height: 0; }
 .hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* GYIK: maga a blokk is és a kérdések is külön nyithatók, animálva */
@@ -760,15 +786,25 @@ nav.links a.active { color: var(--accent); }
         </div>
         <p class="referral"><b>Ismerős ajánlott minket?</b> Írd be a nevét a kérdőív végén: neked 10% kedvezmény jár az egyszeri díjból, neki egy ingyenes hónap az üzemeltetésből. A bevezető ajánlattal nem vonható össze, ilyenkor a nagyobb kedvezmény jár.</p>
       </div>
-      <div class="quote" id="quote">
-        <div class="qtop"><div class="qbar"><i id="qFill"></i></div><span class="qcount" id="qCount"></span></div>
-        <div class="qbody" id="qBody"></div>
-        <div class="error qerr" id="qErr" role="alert"></div>
-        <div class="qfoot">
-          <button class="btn btn-ghost btn-small" id="qBack" type="button">Vissza</button>
-          <button class="btn btn-primary" id="qNext" type="button">Tovább</button>
+      <div class="quote qstart" id="qStart">
+        <div class="qbody">
+          <h3 id="qsTitle">Az első lépés</h3>
+          <p class="qhint" id="qsHint">Kilenc rövid kérdés, nagyjából két perc. Ebből látjuk, hol tart most a vállalkozásod, és merre érdemes továbblépni.</p>
+          <ul class="qintro"><li>Ingyenes, és nem kötelez semmire</li><li>Egy munkanapon belül válaszolunk</li></ul>
         </div>
+        <div class="qfoot"><span></span><button class="btn btn-primary" id="qOpen" type="button">Kezdjük</button></div>
       </div>
+      <dialog class="qdlg" id="qDlg" aria-labelledby="qTitle">
+        <div class="quote" id="quote">
+          <div class="qtop"><div class="qbar"><i id="qFill"></i></div><span class="qcount" id="qCount"></span><button class="qclose" id="qClose" type="button" aria-label="Bezárás"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+          <div class="qbody" id="qBody"></div>
+          <div class="error qerr" id="qErr" role="alert"></div>
+          <div class="qfoot">
+            <button class="btn btn-ghost btn-small" id="qBack" type="button">Vissza</button>
+            <button class="btn btn-primary" id="qNext" type="button">Tovább</button>
+          </div>
+        </div>
+      </dialog>
     </div>
   </section>
 
@@ -1305,9 +1341,7 @@ nav.links a.active { color: var(--accent); }
     { id: 'adat', q: 'Hova küldjük az ajánlatot?', type: 'contact' }
   ];
   // 0. kártya: rövid bevezető, mielőtt az első kérdés jön
-  Q.unshift({ id: 'start', type: 'intro', q: 'Az első lépés',
-    hint: 'Kilenc rövid kérdés, nagyjából két perc. Ebből látjuk, hol tart most a vállalkozásod, és merre érdemes továbblépni.', items: [] });
-  var ans = {}, qi = 0, qDone = false, qSent = false, qStartT = 0, qTimer = null, QN = Q.length - 1; // QN: a valódi kérdések száma
+  var ans = {}, qi = 0, qDone = false, qSent = false, qStartT = 0, qTimer = null, QN = Q.length;
   function escH(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
   function qAnim(dir) { var b = el('qBody'); b.classList.remove('fwd', 'back'); if (dir) { void b.offsetWidth; b.classList.add(dir); } }
   function qErrShow(msg) { var e = el('qErr'); e.textContent = msg; e.classList.remove('shake'); void e.offsetWidth; e.classList.add('shake'); }
@@ -1339,14 +1373,15 @@ nav.links a.active { color: var(--accent); }
     }
     el('qBody').innerHTML = html;
     qAnim(dir);
-    el('qFill').style.width = (qi / QN * 100) + '%'; // az első kérdésnél már egy kicsit töltve, az utolsó (elérhetőségek) lépésnél tele
-    el('qCount').textContent = qi + ' / ' + QN;
-    el('quote').classList.toggle('is-intro', qi === 0); // a nyitókártyán nincs csík
+    el('qFill').style.width = ((qi + 1) / QN * 100) + '%'; // az első kérdésnél már egy kicsit töltve, az utolsónál tele
+    el('qCount').textContent = (qi + 1) + ' / ' + QN;
     el('qBack').textContent = 'Vissza';
     el('qBack').style.visibility = qi === 0 ? 'hidden' : 'visible';
     el('qNext').hidden = false;
-    el('qNext').textContent = qi === 0 ? 'Kezdjük' : qi === Q.length - 1 ? 'Ajánlatkérés elküldése' : 'Tovább';
+    el('qNext').textContent = qi === Q.length - 1 ? 'Elküldés' : 'Tovább';
     el('qErr').textContent = '';
+    if (dir) el('qBody').scrollTop = 0; // új kérdésnél mindig a tetejéről indul, az oldal nem ugrik
+    qStartUpd();
   }
 
   function qSave() {
@@ -1373,9 +1408,8 @@ nav.links a.active { color: var(--accent); }
   }
   function qGo(d) {
     clearTimeout(qTimer);
-    if (qDone && qSent) { ans = {}; qi = 0; qDone = false; qSent = false; qRender('back'); el('qTitle').focus({ preventScroll: true }); return; } // „Új ajánlatkérés”
+    if (qDone && qSent) { ans = {}; qi = 0; qDone = false; qSent = false; qStartT = Date.now(); qRender('back'); el('qTitle').focus({ preventScroll: true }); return; } // „Új ajánlatkérés”
     if (qDone) { qDone = false; qRender('back'); return; }
-    if (qi === 0 && d > 0) qStartT = Date.now();
     qSave();
     if (d > 0) {
       var err = qValid();
@@ -1406,13 +1440,13 @@ nav.links a.active { color: var(--accent); }
   function qEndState() {
     qDone = true;
     el('qFill').style.width = '100%';
-    el('quote').classList.remove('is-intro');
     el('qCount').textContent = 'Kész';
     el('qNext').hidden = true;
     el('qBack').textContent = 'Módosítom a válaszaimat';
     el('qBack').style.visibility = 'visible';
     el('qErr').textContent = '';
     qAnim('fwd');
+    el('qBody').scrollTop = 0;
   }
   function qManual(text, failed) {
     el('qBody').innerHTML = '<h3 id="qTitle" tabindex="-1">Már csak el kell küldened.</h3>' +
@@ -1439,6 +1473,7 @@ nav.links a.active { color: var(--accent); }
     qEndState();
     qSent = true;
     el('qBack').textContent = 'Új ajánlatkérés';
+    qStartUpd();
   }
   function qFinish() {
     var text = qSummary();
@@ -1490,6 +1525,48 @@ nav.links a.active { color: var(--accent); }
   });
   el('qNext').addEventListener('click', function () { qGo(1); });
   el('qBack').addEventListener('click', function () { qGo(-1); });
+
+  // Felugró ablak: megnyitás, bezárás (X, Esc, háttérre koppintás, a böngésző „vissza” gombja)
+  var dlg = el('qDlg'), qPushed = false, qY = 0;
+  function qStartUpd() {
+    var b = el('qOpen');
+    if (qSent) { el('qsTitle').textContent = 'Megkaptuk, köszönjük!'; el('qsHint').textContent = 'Egy munkanapon belül válaszolunk e-mailben.'; b.textContent = 'Új ajánlatkérés'; }
+    else if (qi > 0 || qDone) { el('qsTitle').textContent = 'Az első lépés'; el('qsHint').textContent = 'Ott folytathatod, ahol abbahagytad.'; b.textContent = 'Folytatom (' + Math.min(qi + 1, QN) + ' / ' + QN + ')'; }
+    else b.textContent = 'Kezdjük';
+  }
+  function qOpenDlg() {
+    if (dlg.open) return;
+    if (qSent) { ans = {}; qi = 0; qDone = false; qSent = false; qRender(); }
+    if (!qStartT) qStartT = Date.now();
+    qY = window.scrollY;
+    document.documentElement.classList.add('q-lock');
+    dlg.classList.remove('closing');
+    dlg.showModal();
+    el('qBody').scrollTop = 0;
+    el('qTitle').focus({ preventScroll: true });
+    try { history.pushState({ qdlg: 1 }, ''); qPushed = true; } catch (e) {}
+  }
+  function qShut() {
+    if (!dlg.open) return;
+    clearTimeout(qTimer);
+    var done = function () { dlg.classList.remove('closing'); dlg.close(); document.documentElement.classList.remove('q-lock'); window.scrollTo({ top: qY, behavior: 'instant' }); el('qOpen').focus({ preventScroll: true }); };
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { done(); return; }
+    dlg.classList.add('closing'); setTimeout(done, 200);
+  }
+  function qCloseDlg() { if (qPushed) { qPushed = false; history.back(); } else qShut(); } // a „vissza” lépés a popstate-en keresztül zár
+  window.addEventListener('popstate', function () { qPushed = false; qShut(); });
+  el('qOpen').addEventListener('click', qOpenDlg);
+  el('qClose').addEventListener('click', qCloseDlg);
+  dlg.addEventListener('cancel', function (e) { e.preventDefault(); qCloseDlg(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) qCloseDlg(); });
+  // Minden „Kérj ajánlatot” link egyből a kérdőívet nyitja
+  document.querySelectorAll('a[href="#ajanlat"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      el('ajanlat').scrollIntoView({ behavior: 'auto', block: 'start' });
+      qOpenDlg();
+    });
+  });
   qRender();
 
   // Film: csak akkor megy, amikor látszik; csökkentett mozgásnál kézzel indítható

@@ -1,0 +1,8 @@
+BeállIT weboldal – helyi kipróbálás
+
+1. Csomagold ki a zip-et egy mappába (jobb klikk > Összes kibontása).
+2. Nyisd meg az index.html fájlt dupla kattintással (Chrome, Edge, Opera vagy Firefox).
+
+Amit helyben megnyitva nem fogsz látni rendesen:
+- Az ajánlatkérő automatikus küldése (Web3Forms) helyi fájlból megnyitva nem mindig megy; ilyenkor a tartalék (e-mail / szöveg másolása) jelenik meg.
+- A megosztási kép és a Google-nek szóló adatok csak a beallit.hu címen élesben működnek.
