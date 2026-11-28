@@ -181,6 +181,14 @@ section.block.alt { background: var(--surface); border-block: 1px solid var(--li
 .startup-btn { background: var(--signal); color: var(--ink); border-color: var(--signal); }
 
 /* Bevezető ajánlat */
+.hero-plan { display: flex; align-items: center; gap: 12px; width: fit-content; max-width: 100%; margin-top: 26px; padding: 10px 16px 10px 12px; border-radius: 14px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); color: #E6ECF7; font-size: .95rem; line-height: 1.35; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: background .2s, border-color .2s, transform .2s; }
+.hero-plan, .hero-plan:hover { text-decoration: none; }
+.hero-plan b { color: #fff; }
+.section-head .plan-note { color: var(--ink); }
+.hero-plan:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.32); transform: translateY(-1px); }
+.hero-plan i { flex: none; width: 30px; height: 30px; border-radius: 9px; background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='14' rx='2'/%3E%3Cpath d='M3 8h18M8 21h8M12 18v3'/%3E%3C/svg%3E") center / 18px no-repeat; }
+.hero-plan + .hero-promo { margin-top: 14px; }
+.plan-note { margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: var(--accent-soft); color: var(--ink); line-height: 1.5; }
 .hero-promo { display: inline-block; margin-top: 22px; color: #FFE6A3; font-size: .95rem; text-decoration: underline; text-decoration-color: rgba(255,197,49,.5); text-underline-offset: 4px; }
 .hero-promo:hover { text-decoration-color: var(--signal); }
 .hero-promo b { color: #fff; }
@@ -595,6 +603,7 @@ html.q-lock, html.q-lock body { overflow: hidden; }
           <a class="btn btn-primary" href="#demo">Próbáld ki a foglalót</a>
           <a class="btn btn-ghost" href="#szolgaltatasok">Mit tudunk beállítani?</a>
         </div>
+        <a class="hero-plan" href="#ajanlat"><i aria-hidden="true"></i><span>Weboldalhoz és foglalóhoz <b>ingyenes látványtervet</b> küldünk az ajánlat mellé</span></a>
         <a class="hero-promo" href="#ajanlat" data-promo><span>Bevezető ajánlat: <b>−35%</b> <span class="promo-long">az első 5 ügyfelünknek, </span>még <b data-promo-left>3</b> hely szabad</span></a>
       </div>
       <div class="panel" aria-label="Példa beállítások">
@@ -781,6 +790,7 @@ html.q-lock, html.q-lock body { overflow: hidden; }
       <div class="section-head">
         <h2>Kérj ajánlatot két perc alatt.</h2>
         <p>Válaszolj kilenc rövid kérdésre. Ebből már tudunk személyre szabott, kötelezettség nélküli ajánlatot adni.</p>
+        <p class="plan-note"><b>Ingyenes látványterv:</b> ha weboldalt, webáruházat vagy online foglalót kérsz, az ajánlat mellé elküldjük azt is, hogyan nézne ki a saját oldalad. Így nem csak egy árat kapsz, hanem látod is, mit kapsz érte.</p>
         <div class="promo" data-promo>
           <p><b>Bevezető ajánlat: az első 5 ügyfelünk 35% kedvezményt kap.</b> Az ajánlatban a rendes ár mellett látod, mennyit fizetsz a kedvezménnyel. Cserébe annyit kérünk, hogy ha elégedett vagy, írj rólunk egy Google-véleményt, és a munkádat megmutathassuk a referenciáink között.</p>
           <p class="promo-left">Még <b data-promo-left>3</b> hely szabad.</p>
@@ -791,7 +801,7 @@ html.q-lock, html.q-lock body { overflow: hidden; }
         <div class="qbody">
           <h3 id="qsTitle">Az első lépés</h3>
           <p class="qhint" id="qsHint">Kilenc rövid kérdés, nagyjából két perc. Ebből látjuk, hol tart most a vállalkozásod, és merre érdemes továbblépni.</p>
-          <ul class="qintro"><li>Ingyenes, és nem kötelez semmire</li><li>Egy munkanapon belül válaszolunk</li></ul>
+          <ul class="qintro"><li>Ingyenes, és nem kötelez semmire</li><li>Weboldalhoz és foglalóhoz látványtervet is küldünk</li><li>Egy munkanapon belül válaszolunk</li></ul>
         </div>
         <div class="qfoot"><span></span><button class="btn btn-primary" id="qOpen" type="button">Kezdjük</button></div>
       </div>
